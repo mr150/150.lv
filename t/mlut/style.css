@@ -9,14 +9,24 @@
 	--token-sass-comment: #656556;
 }
 
+mark {
+	color: inherit;
+}
+
 .slide--first {
 	padding-top: 40px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 
-.slide--first h2 {
+.highlight {
+	position: absolute;
+	background: rgba(119, 214, 255, 0.3);
+	border: 1px dashed #308FFF;
+}
+
+.slide--first.slide--first h2 {
 	font-size: 85px;
 	color: #fff;
 }

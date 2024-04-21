@@ -19,18 +19,8 @@
 		</header>
 
 		<section style="color:white;font-weight:bold" class="slide slide--first slide--no-number">
-			<h2 style="text-align:center">Atomic CSS Deep Dive</h2>
-			<div style="padding-bottom:40px" class="D-f Ai-fe Jc-sb">
-				<div>
-					<img class="Va" src="pictures/stachka-logo.svg" width="300" alt="Логотип Стачки">
-					<div>12-13 апреля | Ульяновск | УЛГПУ</div>
-					<div style="gap:1rem" class="D-f Ai-c">
-						<img src="pictures/stachka-section-logo.png" width="70" alt="Логотип секции">
-						<span>Разработка | FrontEnd</span>
-					</div>
-				</div>
-				<p class="slide__author">Валентин Ульянов</p>
-			</div>
+			<h2 class="shout" style="">Atomic CSS Deep Dive</h2>
+			<p style="padding-bottom:40px" class="slide__author">Валентин Ульянов</p>
 			<img class="cover" src="pictures/cover0.jpg" alt="Обложка">
 		</section>
 
@@ -39,7 +29,7 @@
 			<div style="gap:4rem" class="D-f Ai-fs">
 				<img alt="Фото Валентина Ульянова" src="pictures/me.jpg" width="261"/>
 				<ul>
-					<li>В разработке >5 лет</li>
+					<li>В IT больше 8 лет</li>
 					<li>Делаю бэкенд на Node.js и тулинг</li>
 					<li>Разрабатываю open source проект</li>
 					<li>Выступаю на конференциях и веду <br>IT-сообщество в Питере</li>
@@ -89,23 +79,15 @@
 				<li>
 					Сравнение инструментов и технические делати
 					<ul>
-						<!--
-						<section style="padding-top:50px;font-size:22px" class="slide">
-						<li value="•">Нейминг</li>
-						<li value="•">Синтаксис</li>
-						<li value="•">Конвертация значений</li>
-						-->
 						<li value="•">Как устроены утилиты: нейминг, синтаксис и значения</li>
 						<li value="•">Конфигурирование</li>
-						<!--
 						<li value="•">JIT engine</li>
-						-->
 					</ul>
 				</li>
 				<li>Заключение</li>
 			</ul>
 		</section>
-		
+
 		<section class="slide slide--no-number">
 			<h2 class="shout">База</h2>
 		</section>
@@ -145,19 +127,6 @@
 			<img class="cover" src="pictures/myths.jpg" alt="Основные мифы об Atomic CSS">
 		</section>
 
-		<!--
-		<section class="slide">
-			<h2>Основные мифы</h2>
-			<ul>
-				<li>То же самое, что инлайн стили</li>
-				<li>Сложно масштабировать/поддерживать</li>
-				<li>Нечитаемая разметка</li>
-				<li>Сложно запомнить много атомарных классов</li>
-				<li>Это для тех, кто плохо знает CSS</li>
-			</ul>
-		</section>
-		-->
-		
 		<section class="slide slide--no-number">
 			<h2 class="shout">State of Atomic CSS</h2>
 		</section>
@@ -318,6 +287,7 @@
 			<h2>Связь с рукописным CSS 🤡</h2>
 			<div style="gap:3.5rem;display:flex;align-items:flex-start;font-size:22px">
 				<div>
+					<div style="top: 258px;left: 129px;width: 67px;height: 25px;" class="highlight"></div>
 					<img width="480" alt="Пример связи рукописного CSS с Tailwind" src="pictures/tw-plus-css.jpg">
 				</div>
 				<ul>
@@ -330,6 +300,7 @@
 			<h2>Связь с рукописным CSS 🤡</h2>
 			<div style="gap:3.5rem;display:flex;align-items:flex-start;font-size:22px">
 				<div>
+					<div style="top: 167px;left: 129px;width: 96px;height: 25px;" class="highlight"></div>
 					<img width="480" alt="Пример связи рукописного CSS с Tailwind" src="pictures/tw-plus-css.jpg">
 				</div>
 				<ul>
@@ -343,6 +314,7 @@
 			<h2>Связь с рукописным CSS 🤡</h2>
 			<div style="gap:3.5rem;display:flex;align-items:flex-start;font-size:22px">
 				<div>
+					<div style="top: 348px;left: 295px;width: 190px;height: 25px;" class="highlight"></div>
 					<img width="480" alt="Пример связи рукописного CSS с Tailwind" src="pictures/tw-plus-css.jpg">
 				</div>
 				<ul>
@@ -420,37 +392,11 @@
 				<img width="700" src="pictures/util-scheme-all.svg" alt="Схема устройства утилит">
 			</div>
 		</section>
-		
+
 		<section class="slide slide--no-number">
 			<h2 class="shout">Нейминг</h2>
 			<img class="util-minimap" width="300" src="pictures/util-scheme-naming.svg" alt="Схема устройства утилит где выделен нейминг">
 		</section>
-
-		<!-- РАЗБОР СИНТАКСИСА
-		<section class="slide">
-			<h2>Tailwind 😢</h2>
-			<ul>
-				<li>Opinionated названия, созвучные с CSS свойствами/значениями</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Tailwind 😢</h2>
-			<ul>
-				<li>Opinionated названия, созвучные с CSS свойствами/значениями</li>
-				<li>Есть полные, есть сокращенные</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Tailwind 😢</h2>
-			<ul>
-				<li>Opinionated названия, созвучные с CSS свойствами/значениями</li>
-				<li>Есть полные, есть сокращенные</li>
-				<li>Добавляются по принципу ad-hoc</li>
-			</ul>
-		</section>
-		-->
 
 		<section class="slide">
 			<h2>Tailwind 😢</h2>
@@ -519,32 +465,6 @@
 				<li><code>normal</code>: line-height, font-weight, letter-spacing?</li>
 			</ul>
 		</section>
-
-		<!-- РАЗБОР СИНТАКСИСА
-		<section class="slide">
-			<h2>Atomizer 🙂</h2>
-			<ul>
-				<li>В основе сокращения Emmet, но встречаются и полные слова</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Atomizer 🙂</h2>
-			<ul>
-				<li>В основе сокращения Emmet, но встречаются и полные слова</li>
-				<li>Новые названия добавляются по подобию предыдущих</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Atomizer 🙂</h2>
-			<ul>
-				<li>В основе сокращения Emmet, но встречаются и полные слова</li>
-				<li>Новые названия добавляются по подобию предыдущих</li>
-				<li>Нет четких правил сокращений</li>
-			</ul>
-		</section>
-		-->
 
 		<section class="slide">
 			<h2>Atomizer 🥱</h2>
@@ -646,7 +566,9 @@
 			</div>
 		</section>
 
-		<!-- mem here -->
+		<section class="slide">
+			<img class="cover" src="pictures/abbr-mem.jpeg" alt="Мем с Карлом: лаконичный код, удобнее писать">
+		</section>
 
 		<section class="slide">
 			<h2>Почему сокращения?</h2>
@@ -850,18 +772,6 @@
 			</ol>
 		</section>
 
-		<!--
-		<section class="slide">
-			<h2>Алгоритм сокращения одной сущности</h2>
-			<ol>
-				<li>Название сокращаем до первой буквы свойства/значения</li>
-				<li>Если оно из N слов, то берется первая буква из слова</li>
-				<li>Если два названия имеют одну и ту же начальную букву, то в следующем названии, при сортировке их по рейтингу, добавляется буква</li>
-				<li>Если название из N слов, то буква добавляется в соответствующем по порядку слове</li>
-			</ol>
-		</section>
-		-->
-
 		<section class="slide">
 			<p style="font-size:128px;font-family:monospace" class="shout">Ps</p>
 		</section>
@@ -893,16 +803,6 @@
 		<section class="slide">
 			<p style="font-size:128px;font-family:monospace" class="shout">Flg => <br>flex-grow</p>
 		</section>
-
-		<!--
-		<section class="slide">
-			<p style="font-size:128px" class="shout">O</p>
-		</section>
-
-		<section class="slide">
-			<p style="font-size:128px" class="shout">O => opacity</p>
-		</section>
-		-->
 
 		<section class="slide">
 			<h2>Слабые места 🫣</h2>
@@ -1046,13 +946,13 @@
 			<h2>Atomizer 🥱</h2>
 			<p>
 				<code>[&lt;context&gt;[:&lt;pseudo-class&gt;]&lt;combinator&gt;]&lt;Style&gt;[(&lt;value&gt;,&lt;value&gt;?,...)][&lt;!&gt;][:&lt;pseudo-class&gt;][::&lt;pseudo-element&gt;][--&lt;breakpoint_identifier&gt;]</code>
-			</p>	
+			</p>
 		</section>
 
 		<section class="slide">
 			<h2>mlut: components syntax 😎</h2>
 			<p>
-				<code>@:ah_O1_h</code> =>
+				<code>@:ah_O1_h</code>
 			</p>
 		</section>
 
@@ -1068,6 +968,10 @@
 				<code>  }</code>
 				<code>}</code>
 			</pre>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/owl-mem.jpg" alt="Мем: как нарисовать сову">
 		</section>
 
 		<section class="slide">
@@ -1128,11 +1032,60 @@
 		<section class="slide">
 			<h2>Utility components syntax</h2>
 			<p>
-				<code><span style="color:var(--token-at-rule)">@:ah</span>_<span style="color:var(--token-property)">O</span>1_<span  style="color:var(--token-selector)">h</span></code> =>
+				<code>@:ah_O1_h</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span><span style="color:var(--token-sass-comment)">_O1_h</span></code> =>
 			</p>
 			<pre>
 				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
-				<code>  .\@\:ah_O1_h<span style="color:var(--token-selector)">:hover</span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span><span style="color:var(--token-sass-comment)">_O1_h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h { </code>
+				<code> </code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span>_<mark><span style="color:var(--token-property)">O</span>1</mark>_<span style="color:var(--token-sass-comment)">h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h { </code>
+				<code>    <mark><span  style="color:var(--token-property)">opacity</span>: 1</mark></code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span>_<span style="color:var(--token-property)">O</span>1_<mark><span  style="color:var(--token-selector)">h</span></mark></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h<mark><span style="color:var(--token-selector)">:hover</span></mark> {</code>
 				<code>    <span  style="color:var(--token-property)">opacity</span>: 1</code>
 				<code>  }</code>
 				<code>}</code>
@@ -1174,12 +1127,6 @@
 				<li><b style="color:var(--token-selector)">post-states</b> - часть селектора после класса утилиты</li>
 			</ol>
 		</section>
-
-		<!--
-		<section class="slide">
-			<img class="cover" src="pictures/parsed-syntax.jpg" alt="Как парсится утилита в mlut">
-		</section>
-		-->
 
 		<section class="slide">
 			<h2>Конвертация в mlut</h2>
@@ -1254,11 +1201,16 @@
 
 		<section class="slide">
 			<p>
-				<code><span style="color:var(--token-property)">Bgc</span>-red_<span  style="color:var(--token-selector)">h,f</span></code> =>
+				<code>Bgc-red_h,f</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-property)">Bgc</span>-red<span style="color:var(--token-sass-comment)">_h,f</span></code> =>
 			</p>
 			<pre>
-				<code>.Bgc-red_h\,f<span style="color:var(--token-selector)">:hover,</span></code>
-				<code>.Bgc-red_h\,f<span style="color:var(--token-selector)">:focus</span> {</code>
+				<code>.Bgc-red_h\,f {</code>
 				<code>  <span  style="color:var(--token-property)">background-color</span>: red</code>
 				<code>}</code>
 			</pre>
@@ -1266,30 +1218,43 @@
 
 		<section class="slide">
 			<p>
-				<code><span  style="color:var(--token-selector)">^:lc:></span>_<span style="color:var(--token-property)">D</span>-f</code> =>
+				<code><span style="color:var(--token-property)">Bgc</span>-red_<mark><span  style="color:var(--token-selector)">h,f</span></mark></code> =>
 			</p>
 			<pre>
-				<code><span style="color:var(--token-selector)">.-Ctx:last-child ></span> .\^one\:lc\>_D-f {</code>
-				<code>  <span  style="color:var(--token-property)">display</span>: flex</code>
+				<code>.Bgc-red_h\,f<mark><span style="color:var(--token-selector)">:hover,</span></mark></code>
+				<code>.Bgc-red_h\,f<mark><span style="color:var(--token-selector)">:focus</span></mark> {</code>
+				<code>  <span  style="color:var(--token-property)">background-color</span>: red</code>
 				<code>}</code>
 			</pre>
 		</section>
 
-		<!--
-				<li>
-					<code>^one:lc:>_D-f</code> =><br> <code>.-Ctx-one:last-child > .\^one\:lc\>_D-f {...}</code>
-				</li>
-			-->
-
-		<!--
 		<section class="slide">
-			<h2>At-rules в CSS</h2>
-			<ul>
-				<li><b>Regular</b>: <code>@charset</code>, <code>@import</code>, etc
-				<li><b>Conditional</b>: <code>@media</code>, <code>@supports</code>, <code>@container</code>, etc</li>
-			</ul>
+			<p>
+				<code>^:lc:>_D-f</code>
+			</p>
 		</section>
-		-->
+
+		<section class="slide">
+			<p>
+				<code><span  style="color:var(--token-selector)">^:lc:></span><span style="color:var(--token-sass-comment)">_D-f</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-selector)">.-Ctx:last-child ></span> .\^one\:lc\>_D-f {</code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span  style="color:var(--token-selector)">^:lc:></span>_<mark><span style="color:var(--token-property)">D</span>-f</mark></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-selector)">.-Ctx:last-child ></span> .\^one\:lc\>_D-f {</code>
+				<code>  <mark><span style="color:var(--token-property)">display</span>: flex</mark></code>
+				<code>}</code>
+			</pre>
+		</section>
 
 		<section class="slide">
 			<h2>Conditional at-rules в CSS</h2>
@@ -1369,24 +1334,6 @@
 			</ul>
 		</section>
 
-		<!--
-				<p>Отдельный подсинтаксис для брейкпоинтов, потому что слишком часто используются</p>
-				<p>Если несколько сущностей в одном правиле:</p>
-				<ul>
-				<li><code>:</code> => <code>and</code></li>
-				<li><code>,</code> => <code>,</code> (or)</li>
-			</ul>
-		<section class="slide">
-			<h2>Breakpoints</h2>
-			<p>Отдельный подсинтаксис, потому что слишком часто используются</p>
-			<ul>
-				<li><code>lg</code> => <code>(min-width: 992px)</code></li>
-				<li><code>&lt;sm</code> => <code>(max-width: 519px)</code></li>
-				<li><code>sm:md,xl</code> => <code>(min-width: 520px) and (max-width: 767px), (min-width: 1200px)</code></li>
-			</ul>
-		</section>
-		-->
-
 		<section class="slide">
 			<h2>Rules</h2>
 			<p>У каждого правила свое:</p>
@@ -1427,81 +1374,146 @@
 
 		<section class="slide">
 			<p>
-				<code><span style="color:var(--token-at-rule)">@:dm-s:h>=20r</span>_<span style="color:var(--token-property)">Mxw</span>35r</code> =>
+				<code>@:dm-s:h>=20r_Mxw35r</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:dm-s</span><span style="color:var(--token-sass-comment)">:h>=20r_Mxw35r</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (display-mode: standalone)</span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:dm-s<mark>:h>=20r</mark></span><span style="color:var(--token-sass-comment)">_Mxw35r</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (display-mode: standalone) <mark>and (min-height: 20rem)</mark></span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:dm-s:h>=20r</span><span style="color:var(--token-sass-comment)">_Mxw35r</span></code> =>
 			</p>
 			<pre>
 				<code><span style="color:var(--token-at-rule)">@media (display-mode: standalone) and (min-height: 20rem)</span> {</code>
 				<code>  <span style="color:var(--token-selector)">.\@\:dm-s\:h\>\=20r_Mxw35r</span> {</code>
-				<code>    <span  style="color:var(--token-property)">max-width</span>: 35rem</code>
+				<code> </code>
 				<code>  }</code>
 				<code>}</code>
 			</pre>
 		</section>
 
-		<!--
 		<section class="slide">
-			<h2>@media</h2>
-			<ul>
-				<li>Legacy типы: <code>pr</code> => <code>print</code>, <code>s</code> => <code>screen</code>,</li>
-				<li>Default rule: <code>@&lt;empty&gt;</code> => <code>@media</code></li>
-				<li>Media features: <code>ah</code> => <code>(any-hover)</code>, <code>h-n</code> => <code>(hover: none)</code>, <code>c<256</code> => <code>(max-color: 255)</code></li>
-			</ul>
 			<p>
-				<code>@:dm-s,h>=20r:o</code> => <code>@media (display-mode: standalone), (min-height: 20rem) and (orientation: landscape) {...}</code>
+				<code><span style="color:var(--token-at-rule)">@:dm-s:h>=20r</span>_<mark><span style="color:var(--token-property)">Mxw</span>35r</mark></code> =>
 			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (display-mode: standalone) and (min-height: 20rem)</span> {</code>
+				<code>  <span style="color:var(--token-selector)">.\@\:dm-s\:h\>\=20r_Mxw35r</span> {</code>
+				<code>    <mark><span style="color:var(--token-property)">max-width</span>: 35rem</mark></code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
 		</section>
-
-		<section class="slide">
-			<h2>@supports</h2>
-			<ul>
-				<li>Авто-определение целевого свойства и значения:<br> <code>@s_Ml1svw</code> => <code>@supports (margin-left: 1svw) {...}</code></li>
-				<li>Понимает любые утилиты и значения из реестра:<br> <code>@s:d-flr</code> => <code>@supports (display: flow-root)</code></li>
-				<li>Еще примеры крутого DX</li>
-			</ul>
-			<p>
-				<code>Здесь тоже сложный пример цепочки suppports</code> => <code>...</code>
-			</p>
-		</section>
-		-->
 
 		<section class="slide">
 			<h2>At-rules можно комбинировать!</h2>
 			<p>
-				<code><span style="color:var(--token-at-rule)">@s:apcr4/3@:dm</span>_<span style="color:var(--token-property)">Mxw</span>40u</code> =>
+				<code>@s:apcr4/3@:dm_Mxw40u</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>At-rules можно комбинировать!</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3</span><span style="color:var(--token-sass-comment)">@:dm_Mxw40u</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>At-rules можно комбинировать!</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3<mark>@:dm</mark></span><span style="color:var(--token-sass-comment)">_Mxw40u</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
+				<code>  <mark><span style="color:var(--token-at-rule)">@media (display-mode: fullscreen)</span></mark> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>At-rules можно комбинировать!</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3@:dm</span><span style="color:var(--token-sass-comment)">_Mxw40u</span></code> =>
 			</p>
 			<pre>
 				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
 				<code>  <span style="color:var(--token-at-rule)">@media (display-mode: fullscreen)</span> {</code>
 				<code>    <span style="color:var(--token-selector)">.\@s\:apcr4\/3\@\:dm_Mxw40u</span> {</code>
-				<code>      <span style="color:var(--token-property)">max-width</span>: 10rem</code>
+				<code> </code>
 				<code>    }</code>
 				<code>  }</code>
 				<code>}</code>
 			</pre>
 		</section>
 
-		<!--
 		<section class="slide">
-			<ul>
-				<li><code>@s:apcr4/3@:dm</code> => <code>@supports (aspect-ratio: 4/3) { @media (display-mode: fullscreen) {...} }</code></li>
-				<li><code>sm@s:ps-sk</code> => <code>@media (min-width: 520px) {<br> @supports (position: sticky) {...} }</code></li>
-			</ul>
+			<h2>At-rules можно комбинировать!</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3@:dm</span>_<mark><span style="color:var(--token-property)">Mxw</span>40u</mark></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
+				<code>  <span style="color:var(--token-at-rule)">@media (display-mode: fullscreen)</span> {</code>
+				<code>    <span style="color:var(--token-selector)">.\@s\:apcr4\/3\@\:dm_Mxw40u</span> {</code>
+				<code>      <mark><span style="color:var(--token-property)">max-width</span>: 10rem</mark></code>
+				<code>    }</code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
 		</section>
-		-->
 
 		<section class="slide slide--no-number">
 			<img style="width:100%" class="cover" src="pictures/priests-mem.jpg" alt="Кадр из фильма, где священник говорит: 'ну нафиг'">
 		</section>
 
 		<section class="slide">
-			<h2>Слабые места</h2>
+			<h2>Слабые места 🫣</h2>
 			<ul>
 				<li>Нельзя (пока) написать arbitrary псевдоселектор: <br><code>D-f_:pseudo</code> => <code>.D-f pseudo {...}</code></li>
 			</ul>
 		</section>
 
 		<section class="slide">
-			<h2>Слабые места</h2>
+			<h2>Слабые места 🫣</h2>
 			<ul>
 				<li>Нельзя (пока) написать arbitrary псевдоселектор: <br><code>D-f_:pseudo</code> => <code>.D-f pseudo {...}</code></li>
 				<li>Возможны конфликты пользовательских алиасов (<code>-myQuery</code>) с CSS custom media или cutsom selector</li>
@@ -1608,6 +1620,16 @@
 		<section class="slide">
 			<h2>mlut 😎</h2>
 			<p><i>Система конвертации для <b>почти произвольных</b> значений</i></p>
+		</section>
+
+		<section class="slide">
+			<h2>mlut 😎</h2>
+			<p><i>Система конвертации для <b>почти произвольных</b> значений</i></p>
+			<ul>
+				<li>
+					<code><span style="color:var(--token-property)">Ml</span>-1/7</code> => <code><span style="color:var(--token-property)">margin-left</span>: -14.3%</code>
+				</li>
+			</ul>
 		</section>
 
 		<section class="slide">
@@ -1759,16 +1781,6 @@
 
 		<section class="slide">
 			<h2>Конвертеры</h2>
-			<pre><code>@function <span style="color:var(--token-sass-fn)">convert-uv-<mark>number</mark></span>(<span  style="color:var(--token-sass-var)">$value</span>, <span  style="color:var(--token-sass-var)">$data</span>: ())</code></pre>
-			<ul>
-				<li><code>$value</code> - исходное значение</li>
-				<li><code>$data</code> - map с дополнительными данными</li>
-			</ul>
-		</section>
-
-		<!--
-		<section class="slide">
-			<h2>Конвертеры</h2>
 			<pre><code>@function <span style="color:var(--token-sass-fn)">convert-uv-number</span>(<span  style="color:var(--token-sass-var)">$value</span>, <span  style="color:var(--token-sass-var)">$data</span>: ())</code></pre>
 			<ul>
 				<li><code>$value</code> - исходное значение</li>
@@ -1822,30 +1834,6 @@
 				<li>Типичный кейс: оборот значения в CSS-функцию</li>
 			</ul>
 		</section>
-		-->
-
-		<!--
-		<section class="slide">
-			<h2>Ключевые слова</h2>
-			<p>Конвертация - подстановка значения из словаря</p>
-			<ul>
-				<li>Опция утилиты <code>keywords</code></li>
-				<li>Группа в реестре: <code>sizing</code>, <code>line-style</code></li>
-				<li>Цвета: <code>transparent</code>, <code>blue500</code></li>
-				<li>Глобальные и частые: <code>inherit</code>, <code>auto</code></li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Ключевые слова в опциях</h2>
-			<p>DRY в деле</p>
-			<ul>
-				<li>Словарь в опциях утилиты</li>
-				<li>Ссылка на группу(ы) ключевых слов в реестре</li>
-				<li>Ссылка на ключевые слова другой утилиты</li>
-			</ul>
-		</section>
-		-->
 
 		<section class="slide">
 			<h2>Кейс: утилита для градиентов</h2>
@@ -1876,16 +1864,40 @@
 
 		<section class="slide">
 			<h2>Кейс: утилита для градиентов</h2>
-			<code><span style="color:var(--token-property)">-Gdl</span>-r,$action;30p,red;80p,tp</code> =>
+			<code>-Gdl-r,$action;30p,red;80p,tp</code>
 		</section>
 
 		<section class="slide">
 			<h2>Кейс: утилита для градиентов</h2>
-			<code><span style="color:var(--token-property)">-Gdl</span>-r,$action;30p,red;80p,tp</code> =>
+			<code><span  style="color:var(--token-sass-comment)">-Gdl-r,$action;30p,red;80p,tp</span></code> =>
+			<pre>
+				<code><span style="color:var(--token-selector)">.-Gdl-r\,\$action\;30p\,\red\;80p\,tp</span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Кейс: утилита для градиентов</h2>
+			<code><mark><span style="color:var(--token-property)">-Gdl</span></mark><span  style="color:var(--token-sass-comment)">-r,$action;30p,red;80p,tp</span></code> =>
+			<pre>
+				<code><span style="color:var(--token-selector)">.-Gdl-r\,\$action\;30p\,\red\;80p\,tp</span> {</code>
+				<code>  <mark><span  style="color:var(--token-property)">background-image: linear-gradient</span>(</mark></code>
+				<code> </code>
+				<code>  );</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Кейс: утилита для градиентов</h2>
+			<code><span style="color:var(--token-property)">-Gdl</span><mark>-r,$action;30p,red;80p,tp</mark></code> =>
 			<pre>
 				<code><span style="color:var(--token-selector)">.-Gdl-r\,\$action\;30p\,\red\;80p\,tp</span> {</code>
 				<code>  <span  style="color:var(--token-property)">background-image: linear-gradient</span>(</code>
-				<code>    to right, var(--ml-action) 30%, red 80%, transparent</code>
+				<code>    <mark>to right, var(--ml-action) 30%, red 80%, transparent</mark></code>
 				<code>  );</code>
 				<code>}</code>
 			</pre>
@@ -1895,14 +1907,20 @@
 			<img style="width:108%;max-width:none" class="cover" src="pictures/wtf-util.jpg" alt="Что ты такое?">
 		</section>
 
-		<!--
 		<section class="slide">
-			<h2>Утилита с несколькими свойствами</h2>
+			<h2>Слабые места 🫣</h2>
 			<ul>
-				<li>Дополняется</li>
+				<li>(пока) Нет first-class поддержки CSS-функций: <code>calc()</code>, <code>clamp()</code></li>
 			</ul>
 		</section>
-		-->
+
+		<section class="slide">
+			<h2>Слабые места 🫣</h2>
+			<ul>
+				<li>(пока) Нет first-class поддержки CSS-функций: <code>calc()</code>, <code>clamp()</code></li>
+				<li>CSS значения могут занять используемые спецсимволы: <code>;</code>, <code>$</code>, <code>?</code></li>
+			</ul>
+		</section>
 
 		<section class="slide slide--no-number">
 			<h2 class="shout">Конфигурация</h2>
@@ -1937,46 +1955,6 @@
 			<img style="" src="pictures/tw-add-value.jpg" alt="Добавление значения в Tailwind">
 		</section>
 
-		<!--
-		<section class="slide">
-			<h2>Добавить утилиту в Tailwind 😢</h2>
-			<p style="margin-bottom:0">Надо написать плагин!</p>
-			<div style="font-size:22px" class="D-g Gap2r Gtc-t2">
-				<div>
-					<h3>Статические</h3>
-					<ul>
-						<li>Вручную пишиту CSS(-in-JS)-правило</li>
-						<li>Будут доступны variants</li>
-					</ul>
-				</div>
-				<div></div>
-			</div>
-		</section>
-
-		<section class="slide">
-			<h2>Добавить утилиту в Tailwind 😢</h2>
-			<p style="margin-bottom:0">Надо написать плагин!</p>
-			<div style="font-size:22px" class="D-g Gap2r Gtc-t2">
-				<div>
-					<h3>Статические</h3>
-					<ul>
-						<li>Вручную пишиту CSS(-in-JS)-правило</li>
-						<li>Будут доступны variants</li>
-					</ul>
-				</div>
-				<div>
-					<h3>Динамические</h3>
-					<ul>
-						<li>Используйте api для плагинов</li>
-						<li>Можно добавить словарь со значениями</li>
-						<li>Будет доступен arbitrary синтаксис</li>
-						<li>Будут доступны variants</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		-->
-
 		<section class="slide">
 			<h2>Добавить утилиту в Tailwind 😢</h2>
 			<p style="">Надо написать плагин!</p>
@@ -1997,6 +1975,21 @@
 		<section class="slide">
 			<h2>Статическая утилита в Tailwind</h2>
 			<img width="500" src="pictures/tw-add-static-util.jpg" alt="Добавление статической утилиты в Tailwind">
+		</section>
+
+		<section class="slide">
+			<h2>Динамическая утилита в Tailwind</h2>
+			<ul>
+				<li>Можно добавить словарь со значениями</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Динамическая утилита в Tailwind</h2>
+			<ul>
+				<li>Можно добавить словарь со значениями</li>
+				<li>Будет доступен arbitrary синтаксис</li>
+			</ul>
 		</section>
 
 		<section class="slide">
@@ -2135,47 +2128,313 @@
 			<img class="cover" src="pictures/mlut-add-cq.jpg" alt="Добавление container queries в mlut">
 		</section>
 
-		<!--
 		<section class="slide slide--no-number">
 			<h2 class="shout">JIT engine</h2>
 		</section>
 
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/acss-history.jpg" alt="Старые CSS фреймворки">
+		</section>
+
 		<section class="slide">
-			<h2>Общая схема работы</h2>
-			<p>Дополняется</p>
+			<h2>Инструменты старого поколения: AOT</h2>
+			<ol>
+				<li>Генерируем over9000 утилит</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Инструменты старого поколения: AOT</h2>
+			<ol>
+				<li>Генерируем over9000 утилит</li>
+				<li>Смотрим, какие используются</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Инструменты старого поколения: AOT</h2>
+			<ol>
+				<li>Генерируем over9000 утилит</li>
+				<li>Смотрим, какие используются</li>
+				<li>Удаляем лишние</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Проблемы старых инструментов</h2>
+			<ul>
+				<li>Произвольные значения</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Проблемы старых инструментов</h2>
+			<ul>
+				<li>Произвольные значения</li>
+				<li>Постоянно надо редактировать конфиг</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Проблемы старых инструментов</h2>
+			<ul>
+				<li>Произвольные значения</li>
+				<li>Постоянно надо редактировать конфиг</li>
+				<li>Большой бандл CSS в режиме разработки</li>
+			</ul>
 		</section>
 
 		<section class="slide slide--no-number">
-			<h2 class="shout">Best practices</h2>
+			<img class="cover" src="pictures/acss-today.jpg" alt="Современные инструменты Atomic CSS">
 		</section>
 
 		<section class="slide">
-			<h2>Реиспользование стилей: алиасы</h2>
-			<pre>
-				<code>module.exports = {</code>
-				<code>  dividerMain: 'Bdb Bdw-div0 lg_Bdw-div1 Bdc-prm1',</code>
-				<code>  h1Font: 'Fz-h4 lg_Fz-h3 xxl_Fz-h2',</code>
-				<code>  link: 'C-prm0 C-prm1_h Td Trs-btn',</code>
-				<code>};</code>
-			</pre>
-			<pre>
-				<code>&lt;a href="#" class="-Px3su <mark>&lt;%=it.css.link%&gt;</mark>"&gt;Back&lt;/a&gt;</code>
-			</pre>
+			<h2>Инструменты нового поколения: JIT</h2>
+			<ol>
+				<li>Смотрим, какие утилиты используются</li>
+				<li>Генерируем только их</li>
+			</ol>
 		</section>
 
 		<section class="slide">
-			<img class="cover" src="pictures/aliases-mem.jpeg" alt="Но это похоже на CSS правила">
+			<h2>Общая схема работы JIT движка</h2>
+			<ol>
+				<li>Находим файлы с контентом</li>
+			</ol>
 		</section>
 
 		<section class="slide">
-			<h2>Преимущества алиасов</h2>
+			<h2>Общая схема работы JIT движка</h2>
+			<ol>
+				<li>Находим файлы с контентом</li>
+				<li>Сканируем их и достаем утилиты</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Общая схема работы JIT движка</h2>
+			<ol>
+				<li>Находим файлы с контентом</li>
+				<li>Сканируем их и достаем утилиты</li>
+				<li>Генерируем CSS для найденных утилит</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Tailwind 🥴</h2>
 			<ul>
-				<li>Существуют только в build-time - реиспользуются имеющиеся утилиты</li>
-				<li>Меньше чем обычных классов - (почти) нет проблем с неймингом</li>
-				<li>Можно редактировать in-place через замену подстрок</li>
+				<li>PostCSS плагин: AST, интеграции, экосистема</li>
 			</ul>
 		</section>
-		-->
+
+		<section class="slide">
+			<h2>Tailwind 🥴</h2>
+			<ul>
+				<li>PostCSS плагин: AST, интеграции, экосистема</li>
+				<li>Oxide - новый движок в v4</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Unocss 😎</h2>
+			<ul>
+				<li>Самописный генератор утилит</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Unocss 😎</h2>
+			<ul>
+				<li>Самописный генератор утилит</li>
+				<li>Самый быстрый</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Unocss 😎</h2>
+			<ul>
+				<li>Самописный генератор утилит</li>
+				<li>Самый быстрый</li>
+				<li>Тесная интеграция с небольшим количеством сборщиков</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Unocss 😎</h2>
+			<ul>
+				<li>Самописный генератор утилит</li>
+				<li>Самый быстрый</li>
+				<li>Тесная интеграция с небольшим количеством сборщиков</li>
+				<li>Много дополнительных фич: attributify, shortcuts, compilation, etc</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Atomizer 🙂</h2>
+			<ul>
+				<li>Самописный генератор утилит</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Atomizer 🙂</h2>
+			<ul>
+				<li>Самописный генератор утилит</li>
+				<li>Относительно простой, но с legacy-зависимостями</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Atomizer 🙂</h2>
+			<ul>
+				<li>Самописный генератор утилит</li>
+				<li>Относительно простой, но с legacy-зависимостями</li>
+				<li>Хорошая интеграция с большинством сборщиков: <a href="https://unplugin.unjs.io/" target="blank">unplugin</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>mlut 🥴</h2>
+		</section>
+
+		<section class="slide">
+			<h2>mlut 🥴</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<div>
+					<h3>Фронт: TypeScript</h3>
+					<ul>
+						<li>CLI / плагин</li>
+						<li>JIT движок</li>
+					</ul>
+				</div>
+				<div></div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>mlut 🥴</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<div>
+					<h3>Фронт: TypeScript</h3>
+					<ul>
+						<li>CLI / плагин</li>
+						<li>JIT движок</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Бэк: Sass</h3>
+					<ul>
+						<li>Генератор утилит и конфиги</li>
+						<li>CSS библиотека</li>
+						<li>Компилятор Sass</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Связь Sass и JS</h2>
+			<ul>
+				<li>Получение данных из Sass-конфига</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Связь Sass и JS</h2>
+			<ul>
+				<li>Получение данных из Sass-конфига</li>
+				<li>Передача утилит в генератор</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/sass-in-js.jpg" alt="Мем с рукопожатием">
+		</section>
+
+		<section class="slide">
+			<h2>Sass in JS</h2>
+			<ol>
+				<li>Загружаем код нужного Sass-модуля</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Sass in JS</h2>
+			<ol>
+				<li>Загружаем код нужного Sass-модуля</li>
+				<li>Дописываем в него код</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Sass in JS</h2>
+			<ol>
+				<li>Загружаем код нужного Sass-модуля</li>
+				<li>Дописываем в него код</li>
+				<li>Компилируем итоговый скрипт в CSS</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Sass in JS</h2>
+			<ol>
+				<li>Загружаем код нужного Sass-модуля</li>
+				<li>Дописываем в него код</li>
+				<li>Компилируем итоговый скрипт в CSS</li>
+				<li>(при необходимости) Достаем данные из вывода</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<p>
+				<img src="pictures/sass-in-js-config.jpg" alt="Sass in JS: конфиг по молчанию">
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<img src="pictures/sass-in-js-config.jpg" alt="Sass in JS: конфиг по молчанию">
+			</p>
+			<p>
+				<img width="100%" src="pictures/sass-in-js-ts.jpg" alt="Sass in JS: js">
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<img src="pictures/sass-in-js-config.jpg" alt="Sass in JS: конфиг по молчанию">
+			</p>
+			<p>
+				<img width="100%" src="pictures/sass-in-js-ts.jpg" alt="Sass in JS: js">
+			</p>
+			<p>
+				<img width="100%" src="pictures/sass-in-js-result.jpg" alt="Sass in JS: CSS вывод скрипта">
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Особенности работы с Sass</h2>
+			<ul>
+				<li><b>Нет рантайма</b>. Выручает нативный компилятор на Dart: <a href="#">sass-embedded</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Особенности работы с Sass</h2>
+			<ul>
+				<li><b>Нет рантайма</b>. Выручает нативный компилятор на Dart: <a href="#">sass-embedded</a></li>
+				<li><b>Мало фич в языке</b>. Нет классов, regexp и т.д. Но есть кое-что из ФП</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Особенности работы с Sass</h2>
+			<ul>
+				<li><b>Нет рантайма</b>. Выручает нативный компилятор на Dart: <a href="#">sass-embedded</a></li>
+				<li><b>Мало фич в языке</b>. Нет классов, regexp и т.д. Но есть кое-что из ФП</li>
+				<li><b>Максимальная интеграция с CSS</b>. Работа с селекторами, типы данных, перевод структур данных в значения</li>
+			</ul>
+		</section>
 
 		<section class="slide slide--no-number">
 			<h2 class="shout">Заключение</h2>
@@ -2184,24 +2443,24 @@
 		<section class="slide">
 			<h2>Инсайты</h2>
 			<ul>
-				<li value="+">Не бойтесь безумных идей</li>
+				<li value="•">Не бойтесь безумных идей</li>
 			</ul>
 		</section>
 
 		<section class="slide">
 			<h2>Инсайты</h2>
 			<ul>
-				<li value="+">Не бойтесь безумных идей</li>
-				<li value="+">Попробуйте пойти до конца, докапаться до сути проблемы</li>
+				<li value="•">Не бойтесь безумных идей</li>
+				<li value="•">Попробуйте пойти до конца, докапаться до сути проблемы</li>
 			</ul>
 		</section>
 
 		<section class="slide">
 			<h2>Инсайты</h2>
 			<ul>
-				<li value="+">Не бойтесь безумных идей</li>
-				<li value="+">Попробуйте пойти до конца, докапаться до сути проблемы</li>
-				<li value="+">Неудача - тоже результат</li>
+				<li value="•">Не бойтесь безумных идей</li>
+				<li value="•">Попробуйте пойти до конца, докапаться до сути проблемы</li>
+				<li value="•">Неудача - тоже результат</li>
 			</ul>
 		</section>
 
@@ -2234,20 +2493,18 @@
 			<div class="D-g Gap2r Gtc-t2">
 				<div>
 					<em>Валентин Ульянов</em>
+
 					<ul>
-						<li><a href="https://t.me/blog150" target="blank">t.me/blog150</a></li>
-						<li><a href="https://twitter.com/mr150_" target="blank">x.com/mr150_</a></li>
-						<li><a href="https://github.com/mr150" target="blank">github.com/mr150</a></li>
-						<li><a href="https://github.com/mr150/mlut" target="blank">mlut</a></li>
+						<li value="👋"><a href="https://150.lv" target="blank">150.lv</a></li>
+						<li value="📢"><a href="https://t.me/blog150" target="blank">t.me/blog150</a></li>
+						<li value="⭐"><a href="https://github.com/mr150/mlut" target="blank">github.com/mr150/mlut</a></li>
+						<li value="𝕏"><a href="https://twitter.com/mlutcss" target="blank">x.com/mlutcss</a></li>
 					</ul>
-					<span>
-						Презентация: <a href="https://150.lv/t/mlut" target="blank">150.lv/t/mlut</a>
-					</span>
 				</div>
 				<div>
-					<div>Оцените доклад:</div>
-					<a style="background: none" href="https://forms.yandex.ru/cloud/6606523a02848f1f230c963f/?st11=4562" target="blank">
-						<img width="275" src="pictures/qr-feedback.jpg" alt="qr-код на оценку доклада">
+					<div>Презентация:</div>
+					<a style="background: none" href="https://150.lv/t/mlut" target="blank">
+						<img width="275" src="pictures/qr-presentation.png" alt="qr-код на презентацию">
 					</a>
 				</div>
 			</div>
