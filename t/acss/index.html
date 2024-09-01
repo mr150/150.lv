@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Atomic CSS: Верстка и легкость бытия</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+		<link rel="stylesheet" href="style.css">
+		<style>
+      .progress::before {
+        background-color: #ed4344;
+      }
+
+			/*
+			.montserrat {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      .shower {
+        --slide-ratio: calc(16 / 9);
+        --ribbon-size: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+
+      .slide {
+        padding-top: 51px;
+        background-image: url("pictures/fc24-cover.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+      }
+
+      .slide.clear {
+        background-image: none;
+      }
+
+      .slide::after {
+        top: 4px;
+        right: 15px;
+        left: auto;
+        background: none;
+        color: #000;
+      }
+
+      .slide h2 {
+        color: #000;
+        font-size: 60px;
+      }
+
+      .cover {
+        z-index: 1;
+      }
+		 */
+    </style>
+	</head>
+	<body class="shower list">
+
+		<header class="caption">
+			<h1>Atomic CSS: Верстка и легкость бытия</h1>
+			<p>
+				Валентин Ульянов
+				<time datetime="2024-09-30">09.2024</time>
+			</p>
+		</header>
+
+		<section style="" id="cover" class="slide slide--no-number">
+      <style>
+        #cover {
+          background: url("pictures/fc24-title.png") no-repeat center center;
+          background-size: contain;
+        }
+        #cover div {
+          width: 580px;
+          padding-top: 0px;
+          margin-left: -40px;
+        }
+        #cover h2 {
+          margin: 0;
+          font-size: 90px;
+          font-weight: 700;
+					color: #000;
+        }
+        #cover p {
+          margin: 18px 0 0;
+          font-size: 34px;
+          line-height: 150%;
+        }
+      </style>
+
+			<div>
+				<h2>Atomic CSS: <br> Верстка и легкость бытия</h2>
+				<p><b>Валентин Ульянов</b></p>
+			</div>
+			<!--
+					<section style="" id="cover" class="slide slide--first slide--no-number">
+			<h2 class="shout" style="">Atomic CSS: <br> Верстка и легкость бытия</h2>
+			<p style="padding-bottom:40px" class="slide__author">Валентин Ульянов</p>
+			<img class="cover" src="pictures/cover.jpg" alt="Обложка">
+			-->
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT больше 8 лет</li>
+					<li>Делаю бэкенд на Node.js и тулинг</li>
+					<li>Разрабатываю open source проект</li>
+					<li>Выступаю на конференциях и веду <br>IT-сообщество в Питере на 500+ человек</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Я и Atomic CSS</h2>
+			<ul>
+				<li>В теме с 2018</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Я и Atomic CSS</h2>
+			<ul>
+				<li>В теме с 2018</li>
+				<li>Смотрел все инструменты, у которых >20 звезд на гитхабе</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Я и Atomic CSS</h2>
+			<ul>
+				<li>В теме с 2018</li>
+				<li>Смотрел все инструменты, у которых >20 звезд на гитхабе</li>
+				<li>3 года карьеры много верстал</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Я и Atomic CSS</h2>
+			<ul>
+				<li>В теме с 2018</li>
+				<li>Смотрел все инструменты, у которых >20 звезд на гитхабе</li>
+				<li>3 года карьеры много верстал</li>
+				<li>В разработку своего инструмента вложил >1000 часов</li>
+			</ul>
+		</section>
+
+		<section style="" class="slide">
+			<h2>Содержание</h2>
+			<ul>
+				<li>Проблемы верстки</li>
+				<li>Atomic CSS как решение</li>
+				<li>Разбор мифов</li>
+				<li>Кейсы и примеры</li>
+				<!--
+				<li>
+					Сравнение инструментов и технические делати
+					<ul>
+						<li value="•">Как устроены утилиты: нейминг, синтаксис и значения</li>
+						<li value="•">Конфигурирование</li>
+						<li value="•">JIT engine</li>
+					</ul>
+				</li>
+				-->
+				<li>Заключение</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Проблемы верстки</h2>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/bem2018.jpg" alt="Скриншот сайта БЭМ в 2018">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/bem-levels.jpg" alt="Слайд из старого доклада про БЭМ">
+		</section>
+
+		<section class="slide">
+			<h2>Стандартные вопросы БЭМ</h2>
+			<ul>
+				<li>Блок это или элемент?</li>
+				<li>Структура каталогов?</li>
+				<li>Как правильно делать миксы?</li>
+				<li>*Еще вопрос*</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Продвинутые вопросы БЭМ</h2>
+			<ul>
+				<li>Уровни переопределения</li>
+				<li>Как собирать без коллизий</li>
+				<li>Как автоматизировать создание сущностей</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/bem-tools.jpg" alt="Скриншот с bem-tools">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/css-in-js.avif" alt="Код CSS-in-JS">
+		</section>
+
+		<section class="slide">
+			<h2>Современные подходы к CSS</h2>
+			<ul>
+				<li>Scoped решения</li>
+				<li>CSS-in-JS</li>
+				<li>Shadow DOM</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Scoped решения</h2>
+			<ul class="images-list">
+				<li>
+					<img alt="CSS modules logo" width="200" src="pictures/css-modules.png"/>
+				</li>
+				<li>
+					<img alt="Vue JS logo" width="200" src="pictures/vue.png"/>
+				</li>
+				<li>
+					<img alt="Svelte logo" width="200" src="pictures/svelte.svg"/>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Scoped решения</h2>
+			<ul>
+				<li>Пишем CSS как обычно</li>
+				<li>Переключение контекста</li>
+				<li>Большой бандл CSS*</li>
+				<li>Не для каждого стека</li>
+			</ul>
+			<small>*Иногда можно сделать аглификацию, но это не точно</small>
+		</section>
+
+		<section class="slide">
+			<h2>CSS-in-JS</h2>
+			<ul class="images-list">
+				<li>
+					<img alt="StyleX logo" width="200" src="pictures/stylex.png"/>
+				</li>
+				<li>
+					<img alt="Styled components logo" width="200" src="pictures/styled-components.png"/>
+				</li>
+				<li>
+					<img alt="Emotion logo" width="200" src="pictures/emotion.png"/>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>CSS-in-JS</h2>
+			<ul>
+				<li>Пишем CSS не как обычно</li>
+				<li>Ограничения инструмента, баги, etc</li>
+				<li>Не для каждого стека</li>
+				<li>Растет размер бандла*</li>
+			</ul>
+			<small>*При рантайм решениях</small>
+		</section>
+
+		<section class="slide">
+			<h2>Shadow DOM</h2>
+			<ul>
+				<li>Проблемы a11y</li>
+				<li>Сильно зависит от стека</li>
+				<li>Трудности с SSR*</li>
+			</ul>
+			<small>*Declarative shadow DOM поддерживается, но не идеально</small>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/my-path-mem.jpg" alt="Мой путь от БЭМ к Atomic CSS">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/wonka-meme.jpg" alt="Мем с Вилли Вонкой">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/leo-wine-meme.jpg" alt="Мем Дикаприо с вином">
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+				<li><b>Меньше CSS на клиенте</b>: стили перестают добавляться</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+				<li><b>Меньше CSS на клиенте</b>: стили перестают добавляться</li>
+				<li><b>Быстрее пишем стили</b>: короткие классы, переключение файлов</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+				<li><b>Меньше CSS на клиенте</b>: стили перестают добавляться</li>
+				<li><b>Быстрее пишем стили</b>: короткие классы, переключение файлов</li>
+				<li><b>Stack agnostic</b>: можно применять на любом стеке</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/tw-state-of-css.jpg" alt="% использования Tailwind за последине годы в State Of CSS">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/lemon-squeezy-screen.webp" alt="Сайт Lemon Squeezy">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/the-verge-screen.webp" alt="Сайт The Verge">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/wtf-acss.jpg" alt="Пример кода с Atomic CSS">
+		</section>
+
+
+		<!--
+		<section class="slide">
+			<h2>Atomic CSS в 2018</h2>
+			<ul>
+				<li>Неудобный нейминг и синтаксис</li>
+				<li>Нельзя писать сложные стили</li>
+				<li>Неудобно расширять</li>
+				<li>*Еще проблемы*</li>
+			</ul>
+		</section>
+		-->
+
+		<section class="slide slide--no-number">
+			<h2 class="shout"><span style="display:block">Почему</span> Atomic CSS</h2>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/project-example.jpg" alt="Скриншот сайта примера">
+		</section>
+
+		<section class="slide">
+			<h2>Экономия мыслетоплива</h2>
+			<p>Тут примеры, как в atomic мы просто пишем утилиты, а в других подходах (особенно в БЭМ) надо подумать</p>
+		</section>
+
+		<section class="slide">
+			<h2>Малый размер стилей</h2>
+			<ol>
+				<li><b>Atomic CSS</b>: 3.5KB</li>
+				<li><b>CSS-in-JS</b>: 4.0KB</li>
+				<li><b>БЭМ</b>: 5.0KB</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Скорость разработки</h2>
+			<ol>
+				<li><b>Atomic CSS</b>: 2 часа*</li>
+				<li><b>CSS-in-JS</b>: 3 часа</li>
+				<li><b>БЭМ</b>:  3.5 часа</li>
+			</ol>
+			<small>*Впервые сайт был сверстан в атомарном подходе</small>
+		</section>
+
+		<!--
+				Слайд ПРО СТЕК АГНОСТИК
+			-->
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/too-difficult-meme.jpg" alt="Мем: сложна">
+		</section>
+
+		<section class="slide" style="padding-top: 100px;">
+			<div style="text-align:center; margin-bottom:10px">
+				<img width="500" src="pictures/mlut-logo.png" alt="mlut">
+			</div>
+			<blockquote style="max-width: 635px; padding-left: 65px;">
+				<p>
+					Atomic CSS toolkit with Sass and ergonomics for creating styles of any complexity
+				</p>
+			</blockquote>
+		</section>
+
+		<!--
+		<section class="slide">
+			<h2>Нейминг</h2>
+			<p>Тут будет рассказ про алгоритм сокращений mlut</p>
+		</section>
+		-->
+
+		<section class="slide">
+			<h2>Сокращения</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<ul>
+					<li value="➕">Лаконичный код</li>
+					<li value="➕">Удобнее писать</li>
+					<li value="➕">Чуть меньше вес кода</li>
+				</ul>
+				<div></div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/abbr-mem.jpeg" alt="Мем с Гарольдом: лаконичный код, удобнее писать">
+		</section>
+
+		<section class="slide">
+			<h2>Сокращения</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<ul>
+					<li value="➕">Лаконичный код</li>
+					<li value="➕">Удобнее писать</li>
+					<li value="➕">Чуть меньше вес кода</li>
+				</ul>
+				<ul>
+					<li value="➖">Есть порог входа</li>
+					<li value="➖">Подойдут не всем</li>
+				</ul>
+			</div>
+		</section>
+
+				<section class="slide">
+			<h2>Общий алгоритм сокращений кратко</h2>
+			<ol>
+				<li>Находим свойства, которые начинаются с одинаковой буквы</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Общий алгоритм сокращений кратко</h2>
+			<ol>
+				<li>Находим свойства, которые начинаются с одинаковой буквы</li>
+				<li>Составляем их рейтинг</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Общий алгоритм сокращений кратко</h2>
+			<ol>
+				<li>Находим свойства, которые начинаются с одинаковой буквы</li>
+				<li>Составляем их рейтинг</li>
+				<li>Выделяем группы</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Общий алгоритм сокращений кратко</h2>
+			<ol>
+				<li>Находим свойства, которые начинаются с одинаковой буквы</li>
+				<li>Составляем их рейтинг</li>
+				<li>Выделяем группы</li>
+				<li>Составляем сокращения внутри групп</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/css-props.jpg" alt="Скриншот таблицы CSS свойств">
+		</section>
+
+		<section class="slide">
+			<h2>I. Алгоритм сокращения одной сущности</h2>
+			<p>Название сокращаем до первой буквы свойства/значения</p>
+			<p style="font-size:42px">
+				<code>color</code> => <code>C</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>II. Алгоритм сокращения одной сущности</h2>
+			<p>Если название из N слов, то берется первая буква из каждого слова</p>
+			<p style="font-size:42px">
+				<code>color-adjust</code> => <code>Ca</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>III. Алгоритм сокращения одной сущности</h2>
+			<p>Если два названия имеют одну и ту же начальную букву, то в следующем названии, при сортировке их по рейтингу, добавляется буква</p>
+			<ol style="font-size:42px">
+				<li><code>color</code> => <code>C</code></li>
+				<li><code>cursor</code> => <code>Cs</code></li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>IV. Алгоритм сокращения одной сущности</h2>
+			<p>Если название из N слов, то буква добавляется в соответствующем по порядку слове</p>
+			<ol style="font-size:36px">
+				<li><code>color</code> => <code>C</code></li>
+				<li><code>cursor</code> => <code>Cs</code></li>
+				<li><code>color-scheme</code> => <code>Csc</code></li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>I. Порядок добавления буквы</h2>
+			<p>Согласная следующего слога</p>
+			<p style="font-size:42px">
+				<code>cursor</code> => <code>Cs</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>I. Порядок добавления буквы</h2>
+			<p>Согласная следующего слога</p>
+			<p style="font-size:42px">
+				<code>cursor</code> => <code>Cs</code>
+			</p>
+			<p>Если следующий слог начинается на гласную, то берется ближайшая <b>предыдущая согласная</b> от нее</p>
+		</section>
+
+		<section class="slide">
+			<h2>II. Порядок добавления буквы</h2>
+			<p>Следующая согласная</p>
+			<ol style="font-size:42px">
+				<li><code>content</code> => <code>Сt</code></li>
+				<li><code><b>contain</b></code> => <code><b>Cn</b></code></li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>III. Порядок добавления буквы</h2>
+			<p>Следующая гласная (без перескока через согласную)</p>
+			<ol style="font-size:42px">
+				<li><code>content</code> => <code>Сt</code></li>
+				<li><code><b>counter</b>-increment</code> => <code><b>Co</b>i</code></li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:128px;font-family:monospace" class="shout">Ai</p>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:128px;font-family:monospace" class="shout">Ai => <br>align-items</p>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:128px;font-family:monospace" class="shout">Txt</p>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:102px;font-family:monospace" class="shout">Txt => <br>text-transform</p>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:128px;font-family:monospace" class="shout">Ts</p>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:128px;font-family:monospace" class="shout">Ts => transition</p>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:128px;font-family:monospace" class="shout">Fls</p>
+		</section>
+
+		<section class="slide">
+			<p style="font-size:128px;font-family:monospace" class="shout">Fls => <br>flex-shrink</p>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>Синтаксис, в котором утилита разделяется на <i>компоненты</i>, каждый из которых, соответствует части CSS-правила</p>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code>@:ah_O1_h</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span><span style="color:var(--token-sass-comment)">_O1_h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span><span style="color:var(--token-sass-comment)">_O1_h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h { </code>
+				<code> </code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span>_<mark><span style="color:var(--token-property)">O</span>1</mark>_<span style="color:var(--token-sass-comment)">h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h { </code>
+				<code>    <mark><span  style="color:var(--token-property)">opacity</span>: 1</mark></code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Utility components syntax</h2>
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span>_<span style="color:var(--token-property)">O</span>1_<mark><span  style="color:var(--token-selector)">h</span></mark></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h<mark><span style="color:var(--token-selector)">:hover</span></mark> {</code>
+				<code>    <span  style="color:var(--token-property)">opacity</span>: 1</code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<img width="700" alt="Схема components syntax" src="pictures/util-scheme.svg">
+			<ol>
+				<li><b style="color:var(--token-at-rule)">CSS at-rule:</b> брейкпоинты, @supports, etc</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<img width="700" alt="Схема components syntax" src="pictures/util-scheme.svg">
+			<ol>
+				<li><b style="color:var(--token-at-rule)">CSS at-rule:</b> брейкпоинты, @supports, etc</li>
+				<li><b style="color:var(--token-selector)">pre-states</b> - часть селектора перед классом утилиты</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<img width="700" alt="Схема components syntax" src="pictures/util-scheme.svg">
+			<ol>
+				<li><b style="color:var(--token-at-rule)">CSS at-rule:</b> брейкпоинты, @supports, etc</li>
+				<li><b style="color:var(--token-selector)">pre-states</b> - часть селектора перед классом утилиты</li>
+				<li><b style="color:var(--token-property)">Имя</b></li>
+				<li><b>Значение</b></li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<img width="700" alt="Схема components syntax" src="pictures/util-scheme.svg">
+			<ol>
+				<li><b style="color:var(--token-at-rule)">CSS at-rule:</b> брейкпоинты, @supports, etc</li>
+				<li><b style="color:var(--token-selector)">pre-states</b> - часть селектора перед классом утилиты</li>
+				<li><b style="color:var(--token-property)">Имя</b></li>
+				<li><b>Значение</b></li>
+				<li><b style="color:var(--token-selector)">post-states</b> - часть селектора после класса утилиты</li>
+			</ol>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Мифы</h2>
+		</section>
+
+		<section class="slide D-f">
+			<blockquote class="myth">
+				<p>
+					То же самое, что inline-стили
+				</p>
+			</blockquote>
+		</section>
+
+		<section class="slide">
+			<h2>Короткий ответ - нет</h2>
+			<a href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles" target="blank">Длинный ответ</a>
+		</section>
+
+		<section style="" class="slide D-f">
+			<blockquote class="myth">
+				<p>
+					Это для тех, кто плохо знает CSS
+				</p>
+			</blockquote>
+		</section>
+
+		<section class="slide">
+			<h2>Atomic CSS - низкоуровневый</h2>
+			<p>
+				Чем лучше вы знаете CSS...
+			</p>
+			<ul>
+				<li>Тем лучше будет ваш код</li>
+				<li>Тем больше вы сможете сделать на чистом CSS</li>
+			</ul>
+		</section>
+
+		<section style="padding-top:120px;" class="slide">
+			<!--
+			<ul>
+				<li value="❌"><img alt="Код без сокращенного свойства" src="pictures/bdrd-longhand-code.jpg"></li>
+				<li value="✅"><img alt="Код с сокращенным свойством" src="pictures/bdrd-shorthand-code.jpg"></li>
+			</ul>
+			-->
+			<div class="code-with-score">
+				<i>❌</i><img alt="Код без сокращенного свойства" src="pictures/bdrd-longhand-code.jpg">
+			</div>
+		</section>
+
+		<section style="padding-top:120px;" class="slide">
+			<div class="code-with-score">
+				<i>❌</i><img alt="Код без сокращенного свойства" src="pictures/bdrd-longhand-code.jpg">
+			</div>
+			<div class="code-with-score">
+				<i>✅</i><img alt="Код с сокращенным свойством" src="pictures/bdrd-shorthand-code.jpg">
+			</div>
+		</section>
+
+		<section class="slide">
+			<div style="margin-bottom:20px" class="code-with-score">
+				<i>❌</i><img alt="Код без без множественного селектора" src="pictures/multiple-selector-long-code.jpg">
+			</div>
+		</section>
+
+		<section class="slide">
+			<div style="margin-bottom:20px" class="code-with-score">
+				<i>❌</i><img alt="Код без без множественного селектора" src="pictures/multiple-selector-long-code.jpg">
+			</div>
+			<div class="code-with-score">
+				<i>✅</i>
+			<div>
+				<code><span style="color:var(--token-property)">Bgc</span>-red_<span  style="color:var(--token-selector)">h,fv</span></code>
+			</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<div style="margin-bottom:20px" class="code-with-score">
+				<i>❌</i><img alt="Код без без множественного селектора" src="pictures/multiple-selector-long-code.jpg">
+			</div>
+			<div class="code-with-score">
+				<i>✅</i>
+			<div>
+				<code><span style="color:var(--token-property)">Bgc</span>-red_<span  style="color:var(--token-selector)">h,fv</span></code> =>
+			</div>
+			</div>
+			<pre>
+				<code>.Bgc-red_h\,fv<span style="color:var(--token-selector)">:hover,</span></code>
+				<code>.Bgc-red_h\,fv<span style="color:var(--token-selector)">:focus-visible</span> {</code>
+				<code>  <span  style="color:var(--token-property)">background-color</span>: red</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code>@s:apcr4/3@:dm_Mxw40u</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3</span><span style="color:var(--token-sass-comment)">@:dm_Mxw40u</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3<mark>@:dm</mark></span><span style="color:var(--token-sass-comment)">_Mxw40u</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
+				<code>  <mark><span style="color:var(--token-at-rule)">@media (display-mode: fullscreen)</span></mark> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3@:dm</span><span style="color:var(--token-sass-comment)">_Mxw40u</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
+				<code>  <span style="color:var(--token-at-rule)">@media (display-mode: fullscreen)</span> {</code>
+				<code>    <span style="color:var(--token-selector)">.\@s\:apcr4\/3\@\:dm_Mxw40u</span> {</code>
+				<code> </code>
+				<code>    }</code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@s:apcr4/3@:dm</span>_<mark><span style="color:var(--token-property)">Mxw</span>40u</mark></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@supports (aspect-ratio: 4/3)</span> {</code>
+				<code>  <span style="color:var(--token-at-rule)">@media (display-mode: fullscreen)</span> {</code>
+				<code>    <span style="color:var(--token-selector)">.\@s\:apcr4\/3\@\:dm_Mxw40u</span> {</code>
+				<code>      <mark><span style="color:var(--token-property)">max-width</span>: 10rem</mark></code>
+				<code>    }</code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section style="" class="slide D-f">
+			<blockquote class="myth">
+				<p>
+					Проблематично реиспользовать стили, особенно, вне компонентов
+				</p>
+			</blockquote>
+		</section>
+
+		<section class="slide">
+			<h2>Алиасы</h2>
+			<!--
+			<pre>
+				<code>module.exports = {</code>
+				<code>  dividerMain: 'Bdb Bdw-div0 lg_Bdw-div1 Bdc-prm1',</code>
+				<code>  h1Font: 'Fz-h4 lg_Fz-h3 xxl_Fz-h2',</code>
+				<code>  link: 'C-prm0 C-prm1_h Td Trs-btn',</code>
+				<code>};</code>
+			</pre>
+			-->
+			<img width="700" alt="Код объявления алиасов" src="pictures/alias-js.jpg">
+		</section>
+
+		<section class="slide">
+			<h2>Алиасы</h2>
+			<!--
+			<pre>
+				<code>module.exports = {</code>
+				<code>  dividerMain: 'Bdb Bdw-div0 lg_Bdw-div1 Bdc-prm1',</code>
+				<code>  h1Font: 'Fz-h4 lg_Fz-h3 xxl_Fz-h2',</code>
+				<code>  link: 'C-prm0 C-prm1_h Td Trs-btn',</code>
+				<code>};</code>
+			</pre>
+			-->
+			<img width="700" alt="Код объявления алиасов" src="pictures/alias-js.jpg">
+			<img width="700" alt="Код объявления алиасов" src="pictures/alias-html.jpg">
+		</section>
+
+			<!--
+		<section class="slide">
+			<h2>Алиасы</h2>
+			<pre>
+				<code>&lt;a href="#" class="-Px3su <mark>&lt;%=it.css.link%&gt;</mark>"&gt;Back&lt;/a&gt;</code>
+			</pre>
+			<img width="700" alt="Код объявления алиасов" src="pictures/alias-html.jpg">
+		</section>
+			-->
+
+		<section class="slide">
+			<img class="cover" src="pictures/aliases-mem.jpeg" alt="Но это похоже на CSS правила">
+		</section>
+
+		<section class="slide">
+			<h2>Преимущества алиасов</h2>
+			<ul>
+				<li>Существуют только в build-time - реиспользуются имеющиеся утилиты</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Преимущества алиасов</h2>
+			<ul>
+				<li>Существуют только в build-time - реиспользуются имеющиеся утилиты</li>
+				<li>Меньше чем обычных классов - (почти) нет проблем с неймингом</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Преимущества алиасов</h2>
+			<ul>
+				<li>Существуют только в build-time - реиспользуются имеющиеся утилиты</li>
+				<li>Меньше чем обычных классов - (почти) нет проблем с неймингом</li>
+				<li>Можно редактировать in-place через замену подстрок</li>
+			</ul>
+		</section>
+
+		<!--
+		<section style="" class="slide D-f">
+			<blockquote class="myth">
+				<p>
+					 Цвета через C-blue500
+				</p>
+			</blockquote>
+		</section>
+		-->
+
+		<!--
+		<section style="" class="slide D-f">
+			<blockquote class="myth">
+				<p>
+					 <code style="font-style:normal">@apply</code> для реиспользования утилит
+				</p>
+			</blockquote>
+		</section>
+		-->
+
+		<section style="" class="slide D-f">
+			<blockquote class="myth">
+				<p>
+					Слишком длинные className
+				</p>
+			</blockquote>
+		</section>
+
+		<section class="slide">
+			<h2>Сравнение длины <code>class</code></h2>
+			<!--
+			<td class="weather-table__body-cell weather-table__body-cell_type_daypart weather-table__body-cell_wrapper">...</td>
+
+			<td class="Pt40 Txa-l Txi0 Pb10 W94 Mnw-a Pl74 Va-m">...</td>
+
+			<div class="tm-article-comments-counter-link tm-data-icons__item">...</div>
+
+			<div class="Ct-n_af Ml32_+:& Ps D-f Ai-c H100p">...</div>
+			-->
+			<img alt="Пример кода с сайта Яндекса" src="pictures/yandex-example-code.jpg">
+		</section>
+
+		<section class="slide">
+			<h2>Сравнение длины <code>class</code></h2>
+			<img width="100%" alt="Пример кода с сайта Хабра" src="pictures/habr-example-code.jpg">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/acss-class-slide.jpg" alt="">
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Best practices</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Best practices</h2>
+			<ul>
+				<li>Custom properties</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Best practices</h2>
+			<ul>
+				<li>Custom properties</li>
+				<li>Современные возможности CSS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Best practices</h2>
+			<ul>
+				<li>Custom properties</li>
+				<li>Современные возможности CSS</li>
+				<li>Работа с контекстом</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Custom properties</h2>
+			<ul>
+				<li>Прокидывание стилей в компонент</li>
+				<li>Цвета и темы</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Прокидывание стилей</h2>
+			<!--
+			сокращенный свойства в компо для простоты
+// card.jsx
+function Card({item}) {
+  return (
+		<div className="P4u Bd Bgc-$cardBgc?#ccc ...">
+			<img className="W-$cardImgWidth?200 ..." alt="" src="{item.img}">
+			<h3 className="...">{item.title}</h3>
+			<a className="..." href="{item.link}">More</a>
+		</div>
+	);
+}
+
+		<div className="P4u Bd-$cardBd?1;s Bgc-$cardBgc?#ccc ...">
+			<ul className="-CardBd3">
+
+		<aside>
+			<h2>Recommended</h2>
+			<ul className="-CardBgc-$blue200">
+				{items.map((item) => (
+					...
+				))}
+			</ul>
+		</aside>
+
+		<section>
+			<h2>Catalog</h2>
+			<ul className="lg_-CardImgWidth350">
+				{items.map((item) => (
+					<li key={item.id} className="...">
+						<Card item={item}/>
+					</li>
+				))}
+			</ul>
+		</section>
+
+				-->
+			<p>Пример</p>
+		</section>
+
+		<section class="slide">
+			<h2>Цвета и темы</h2>
+			<p>Пример</p>
+		</section>
+
+		<section class="slide">
+			<h2>Работа с контекстом</h2>
+			<p><i>Контекст</i> - специальная утилита, которая не примеряет стилей, но которую удобно комбинировать в сложных селекторах.</p>
+		</section>
+
+		<section class="slide">
+			<h2>Работа с контекстом</h2>
+			<p><i>Контекст</i> - специальная утилита, которая не примеряет стилей, но которую удобно комбинировать в сложных селекторах.</p>
+			<p>
+				Обозначается как <code>^</code> в синтаксисе утилит.
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span  style="color:var(--token-selector)"><mark>^</mark>:lc:></span>_<span style="color:var(--token-property)">D</span>-f</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span  style="color:var(--token-selector)"><mark>^</mark>:lc:></span>_<span style="color:var(--token-property)">D</span>-f</code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-selector)"><mark>.-Ctx</mark>:last-child ></span> .\^\:lc\>_D-f {</code>
+				<code>  <span style="color:var(--token-property)">display</span>: flex</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Контекст</h2>
+			<ul>
+				<li>Можно использовать с любыми утилитами</li>
+				<li>Можно как угодно комбинировать в states</li>
+				<li>Может быть именованным</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span  style="color:var(--token-selector)"><mark>^one</mark>:h</span>_<span style="color:var(--token-property)">C</span>-red</code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-selector)"><mark>.-Ctx-one</mark>:hover </span> .\^one\:h_C-red {</code>
+				<code>  <span style="color:var(--token-property)">color</span>: red</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Техники работы с контекстом</h2>
+			<ul>
+				<li>Group hover/focus/etc</li>
+				<li>API компонента</li>
+				<li>CSS-only интерактивность</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<p>Примеры техник</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Кейсы</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Большие проекты на Atomic CSS</h2>
+			<ul>
+				<li><a href="https://www.spiegel.de/" target="blank">The Verge</a> - Tailwind</li>
+				<li><a href="https://www.lemonsqueezy.com/" target="blank">Lemon Squeezy</a> - Tailwind</li>
+				<li><a href="https://www.yahoo.com/" target="blank">Yahoo</a> - Atomizer</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<p>Разбор кейсов</p>
+		</section>
+
+		<!--===============================================-->
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Заключение</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Хорошо подходит для:</h2>
+			<ul>
+				<li value="✅">Лендинг - <a href="https://top10.netflix.com/" target="blank">Netflix Global Top 10</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Хорошо подходит для:</h2>
+			<ul>
+				<li value="✅">Лендинг - <a href="https://top10.netflix.com/" target="blank">Netflix Global Top 10</a></li>
+				<li value="✅">Объемный сервис, контент-first - <a href="https://www.spiegel.de/" target="blank">Der Spiegel</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Хорошо подходит для:</h2>
+			<ul>
+				<li value="✅">Лендинг - <a href="https://top10.netflix.com/" target="blank">Netflix Global Top 10</a></li>
+				<li value="✅">Объемный сервис, контент-first - <a href="https://www.spiegel.de/" target="blank">Der Spiegel</a></li>
+				<li value="✅">Продукт (выше) среднего масштаба - <a href="https://tinder.com/" target="blank">Tinder</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Вряд ли подойдет для</h2>
+			<ul>
+				<li value="❌">Rich UI - Google docs</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Вряд ли подойдет для</h2>
+			<ul>
+				<li value="❌">Rich UI - Google docs</li>
+				<li value="❌">Огромный продукт / экосистема - Яндекс</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Альтернативы</h2>
+			<ul>
+				<li>Много динамики: CSS-in-JS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Альтернативы</h2>
+			<ul>
+				<li>Много динамики: CSS-in-JS</li>
+				<li>Rich UI: Canvas, WASM, $mol</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Альтернативы</h2>
+			<ul>
+				<li>Много динамики: CSS-in-JS</li>
+				<li>Rich UI: Canvas, WASM, $mol</li>
+				<li>Огромный продукт / экосистема: $mol</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/mol.png" alt="Логотип $mol">
+		</section>
+
+		<!--
+		<section class="slide">
+			<h2>Области применения</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<ul>
+					<li value="➕">Лендинг</li>
+					<li value="➕">Объемный сервис: контент-first</li>
+					<li value="➕">Продукт среднего масштаба</li>
+				</ul>
+				<ul>
+				</ul>
+			</div>
+			не типовой дизайн
+		</section>
+		-->
+
+		<section class="slide">
+			<h2>Инвестиционная история</h2>
+			<blockquote style="max-width: 635px; padding-left: 65px;">
+				<p>
+					Лучше день потерять, потом за 5 минут долететь
+				</p>
+			</blockquote>
+		</section>
+
+		<section class="slide">
+			<h2>Выводы</h2>
+			<ul>
+				<li>Не 1 фреймворк</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Выводы</h2>
+			<ul>
+				<li>Не 1 фреймворк</li>
+				<li>Не замена CSS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Выводы</h2>
+			<ul>
+				<li>Не 1 фреймворк</li>
+				<li>Не замена CSS</li>
+				<li>Методология</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Вопросы?</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<div>
+					<em>Валентин Ульянов</em>
+
+					<ul>
+						<li value="👋"><a href="https://150.lv" target="blank">150.lv</a></li>
+						<li value="📢"><a href="https://t.me/blog150" target="blank">t.me/blog150</a></li>
+					</ul>
+				</div>
+				<div>
+					<div>Презентация:</div>
+					<a style="background: none" href="https://150.lv/t/mlut" target="blank">
+						<img width="275" src="pictures/qr-presentation.png" alt="qr-код на презентацию">
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<footer class="badge">
+			<a href="https://github.com/shower/shower">Powered by Shower</a>
+		</footer>
+
+		<div class="progress"></div>
+
+		<script src="shower/shower.js"></script>
+	</body>
+</html>
