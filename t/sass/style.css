@@ -115,3 +115,7 @@ h3 {
 .copyright--big {
 	font-size: 20px;
 }
+
+.decor-list li::before {
+	opacity: 1;
+}

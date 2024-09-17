@@ -87,7 +87,7 @@
 				<li>CSS vs Sass</li>
 				<li>Альтернативы препроцессоров</li>
 				<li>Разбор продвинутых возможностей</li>
-				<li>Сложные кейсы</li>
+				<li>Применение на практике</li>
 				<li>Заключение</li>
 			</ul>
 		</section>
@@ -233,7 +233,7 @@
 		</section>
 
 		<section class="slide">
-			<ul>
+			<ul class="decor-list">
 				<li value="✅">Переменные</li>
 				<li>Вложенность</li>
 				<li>Цветовые и математические функции</li>
@@ -308,7 +308,7 @@
 		</section>
 
 		<section class="slide">
-			<ul>
+			<ul class="decor-list">
 				<li value="✅">Переменные</li>
 				<li value="🟡">Вложенность</li>
 				<li>Цветовые и математические функции</li>
@@ -578,7 +578,7 @@ $base-color: #c6538c;
 		</section>
 
 		<section class="slide">
-			<ul>
+			<ul class="decor-list">
 				<li value="✅">Переменные</li>
 				<li value="🟡">Вложенность</li>
 				<li value="✅">Цветовые и математические функции</li>
@@ -657,7 +657,7 @@ $base-color: #c6538c;
 		</section>
 
 		<section class="slide">
-			<ul>
+			<ul class="decor-list">
 				<li value="✅">Переменные</li>
 				<li value="🟡">Вложенность</li>
 				<li value="✅">Цветовые и математические функции</li>
@@ -670,23 +670,23 @@ $base-color: #c6538c;
 		</section>
 
 		<section class="slide">
-			<h2>Другие возможности препроцессоров</h2>
-			<ul>
+			<h2>Менее популярные возможности</h2>
+			<ul class="decor-list">
 				<li value="❌">Миксины</li>
 			</ul>
 		</section>
 
 		<section class="slide">
-			<h2>Другие возможности препроцессоров</h2>
-			<ul>
+			<h2>Менее популярные возможности</h2>
+			<ul class="decor-list">
 				<li value="❌">Миксины</li>
 				<li value="❌">Flow control правила и функции: <code>@if</code>, <code>if()</code>, <code>@each</code>, etc</li>
 			</ul>
 		</section>
 
 		<section class="slide">
-			<h2>Другие возможности препроцессоров</h2>
-			<ul>
+			<h2>Менее популярные возможности</h2>
+			<ul class="decor-list">
 				<li value="❌">Миксины</li>
 				<li value="❌">Flow control правила и функции: <code>@if</code>, <code>if()</code>, <code>@each</code>, etc</li>
 				<li value="❌">Свои функции</li>
@@ -918,7 +918,7 @@ export function Button() {
 			<ul>
 				<li>Модульная система</li>
 				<li>Миксины и <code>@at-root</code></li>
-				<li>Структуры данных в Sass</li>
+				<li>Структуры данных</li>
 			</ul>
 		</section>
 
@@ -927,7 +927,7 @@ export function Button() {
 			<ul>
 				<li>Модульная система</li>
 				<li>Миксины и <code>@at-root</code></li>
-				<li>Структуры данных в Sass</li>
+				<li>Структуры данных</li>
 				<li>Работа с функциями</li>
 			</ul>
 		</section>
@@ -951,7 +951,7 @@ export function Button() {
 			<img width="440" alt="Пример использования модуля Sass" src="pictures/sass-module-use.jpg">
 		</section>
 
-		<section class="slide" style="padding-top:30px">
+		<section class="slide">
 			<h2>Модульная система</h2>
 			<p>"Динамический" импорт</p>
 			<img width="440" alt="Динамический импорт модуля Sass" src="pictures/sass-dynamic-import.jpg">
@@ -977,7 +977,14 @@ export function Button() {
 		</section>
 
 		<section class="slide slide--no-number">
-			<img class="cover" src="pictures/nerd.jpg" alt="Нёрд">
+			<figure>
+				<img class="cover" src="pictures/nerd.jpg" alt="Мем: Bad Luck Brian">
+				<figcaption class="copyright">
+					<a href="https://en.wikipedia.org/wiki/File:Bad_Luck_Brian.jpg" target="blank">
+						en.wikipedia.org/wiki/File:Bad_Luck_Brian.jpg
+					</a>
+				</figcaption>
+			</figure>
 		</section>
 
 		<section class="slide">
@@ -1033,7 +1040,7 @@ export function Button() {
 			<h2>@at-root</h2>
 			<p>Выносит правило</p>
 			<ul>
-				<li>Из одного селектора в другой или в корень</li>
+				<li>Из одного селектора в другой, либо в корень</li>
 				<li>Из всех at-rules или только из некоторых</li>
 			</ul>
 		</section>
@@ -1099,7 +1106,7 @@ export function Button() {
 			<h2>List</h2>
 			<ul>
 				<li>Можно использовать разные скобки: <code>()</code>, <code>[]</code></li>
-				<li>Разделители: <code> </code>, <code>/</code> и <code>,</code></li>
+				<li>Разделители: <code> </code>, <code>/</code> или <code>,</code></li>
 			</ul>
 		</section>
 
@@ -1107,7 +1114,7 @@ export function Button() {
 			<h2>List</h2>
 			<ul>
 				<li>Можно использовать разные скобки: <code>()</code>, <code>[]</code></li>
-				<li>Разделители: <code> </code>, <code>/</code> и <code>,</code></li>
+				<li>Разделители: <code> </code>, <code>/</code> или <code>,</code></li>
 				<li>Отсчет начинается с 1</li>
 			</ul>
 		</section>
@@ -1116,7 +1123,7 @@ export function Button() {
 			<h2>List</h2>
 			<ul>
 				<li>Можно использовать разные скобки: <code>()</code>, <code>[]</code></li>
-				<li>Разделители: <code> </code>, <code>/</code> и <code>,</code></li>
+				<li>Разделители: <code> </code>, <code>/</code> или <code>,</code></li>
 				<li>Отсчет начинается с 1</li>
 				<li>Могут содержать любые типы данных</li>
 			</ul>
@@ -1151,6 +1158,17 @@ export function Button() {
 			</ul>
 		</section>
 
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/sass-map-in-key.jpg" alt="Дикаприо Мем">
+				<figcaption class="copyright">
+					<a href="https://imgflip.com/memetemplate/15040632/Leonardo-Dicaprio" target="blank">
+						imgflip.com/memetemplate/15040632/Leonardo-Dicaprio
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
 		<section class="slide">
 			<h2>Map</h2>
 			<img width="700" alt="Словари как списки в Sass" src="pictures/sass-map-list.jpg">
@@ -1159,14 +1177,14 @@ export function Button() {
 		<section class="slide">
 			<h2>Функции</h2>
 			<ul>
-				<li>First class values в Sass</li>
+				<li>First class значения в Sass</li>
 			</ul>
 		</section>
 
 		<section class="slide">
 			<h2>Функции</h2>
 			<ul>
-				<li>First class values в Sass</li>
+				<li>First class значения в Sass</li>
 				<li>По умолчанию - чистые</li>
 			</ul>
 		</section>
@@ -1174,7 +1192,7 @@ export function Button() {
 		<section class="slide">
 			<h2>Функции</h2>
 			<ul>
-				<li>First class values в Sass</li>
+				<li>First class значения в Sass</li>
 				<li>По умолчанию - чистые</li>
 				<li>Можно использовать spread (<code>...</code>) для параметров</li>
 			</ul>
@@ -1554,7 +1572,7 @@ $at-rules-db: (
 				<div>
 					<em>Валентин Ульянов</em>
 
-					<ul>
+					<ul class="decor-list">
 						<li value="👋"><a href="https://150.lv" target="blank">150.lv</a></li>
 						<li value="📢"><a href="https://t.me/blog150" target="blank">t.me/blog150</a></li>
 						<li value="⭐"><a href="https://github.com/mr150/mlut" target="blank">github.com/mr150/mlut</a></li>
