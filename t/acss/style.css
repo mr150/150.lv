@@ -1,15 +1,37 @@
 .shower {
 	--slide-ratio: calc(16 / 9);
-	--token-at-rule: #007936;
-	--token-selector: #872bff;
-	--token-property: #d30038;
+	--token-at-rule: #00ac4d;
+	--token-selector: #9e54ff;
+	--token-property: #f04;
 	--token-sass-str: #df1144;
 	--token-sass-fn: #900;
 	--token-sass-var: #066;
 	--token-sass-comment: #656556;
+	--text-primary: black;
+	--text-invert: white;
+	--color-blue: #3c98f5;
+	--color-yellow: rgba(119, 214, 255, 0.22);
+	--color-fill: #656c7652;
+}
+
+.slide {
+	color: var(--text-invert);
+	background-color: var(--text-primary);
+
+	& li,
+	& li::before,
+	h2 {
+		color: var(--text-invert);
+	}
+
+	pre code:not(:only-child)::before {
+		color: #797c82;
+	}
 }
 
 mark {
+	--token-at-rule: #00d05d;
+
 	color: inherit;
 }
 
@@ -41,6 +63,35 @@ mark {
 	line-height: 1.5;
 	text-align: right;
 	margin: 0px !important;
+}
+
+.progress::before {
+	background-color: #ed4344;
+}
+
+#cover {
+	background: url("pictures/fc24-title.jpg") no-repeat center center;
+	background-size: contain;
+}
+
+#cover div {
+	width: 580px;
+	padding-top: 0px;
+	margin-left: -40px;
+}
+
+#cover h2 {
+	margin: 0;
+	font-size: 90px;
+	font-weight: 700;
+	color: #000;
+}
+
+#cover p {
+	margin: 18px 0 0;
+	font-size: 34px;
+	line-height: 150%;
+	color: #000;
 }
 
 h3 {
@@ -134,4 +185,13 @@ h3 {
 .code-with-score i {
 	font-size: 36px;
 	font-style: normal;
+}
+
+.slide .pros-cons-list > li:lang(ru)::before {
+	font-weight: bold;
+	opacity: 1;
+}
+
+.decor-list li::before {
+	opacity: 1;
 }
