@@ -65,33 +65,33 @@ mark {
 	margin: 0px !important;
 }
 
-.progress::before {
-	background-color: #ed4344;
-}
-
 #cover {
-	background: url("pictures/fc24-title.jpg") no-repeat center center;
+	background: url("pictures/cover-new-bg.jpg") no-repeat center center;
 	background-size: contain;
+	padding: 40px 60px;
+	display: flex;
 }
 
 #cover div {
-	width: 580px;
-	padding-top: 0px;
-	margin-left: -40px;
+	/*margin-left: -40px;*/
+	display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 #cover h2 {
 	margin: 0;
+	width: 580px;
 	font-size: 90px;
 	font-weight: 700;
 	color: #000;
 }
 
 #cover p {
-	margin: 18px 0 0;
+	margin: auto 0 0;
 	font-size: 34px;
-	line-height: 150%;
 	color: #000;
+	text-align: right;
 }
 
 h3 {
