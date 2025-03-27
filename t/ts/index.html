@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Почему я не буду писать свою следующую библиотеку на TypeScript</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<link rel="stylesheet" href="../shared/shower/themes/ribbon/styles/styles.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="shower list">
+
+		<header class="caption">
+			<h1>Почему я не буду писать свою следующую библиотеку на TypeScript</h1>
+			<p>
+				Валентин Ульянов
+				<time datetime="2025-04-07">04.2025</time>
+			</p>
+		</header>
+
+		<section style="font-weight:bold" class="slide slide--first slide--no-number">
+			<h2 style="text-align:center">Почему я не буду писать<br>свою следующую библиотеку на TypeScript</h2>
+			<p class="slide__author">Валентин Ульянов</p>
+			<img class="cover" src="pictures/cover-final.jpg" alt="">
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты и редакторы документов, типа Word и Excel</li>
+					<li>Разрабатываю open source проект</li>
+					<li>Выступаю на конференциях и веду <br>IT-сообщество в Питере на 600+ человек</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Я и JavaScript/TypeScript</h2>
+			<ul>
+				<li>Первый опыт с JS был в 2013</li>
+				<li>С 2022 в основном писал на TS</li>
+				<li>Сделал несколько библиотек на TS</li>
+				<li>Сейчас работаю с проектом на 1 500 000 строк кода</li>
+			</ul>
+		</section>
+
+		<section style="" class="slide">
+			<h2>Содержание</h2>
+			<ul>
+				<li>Трезвый взгляд на TypeScript</li>
+				<li>Повод(ы) не писать на TypeScript</li>
+				<li>Что делать?</li>
+				<li>Заключение</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/panda-init.webp" alt="Кадр из Кунг-фу Панды">
+				<figcaption class="copyright">
+					<a href="https://www.kinopoisk.ru/picture/747500/" target="blank">
+						kinopoisk.ru/picture/747500/
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/talk-name-vs-talk-content.jpg" alt="Дисклеймер о контенте доклада">
+		</section>
+
+		<section class="slide">
+			<p>
+				<b>Системный код</b> - код, который нужен для работы другого кода. Библиотеки, фреймворки, утилиты, etc
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<b>Прикладной код</b> - программа для решения задач предметной области. Сервис доставки, интернет-магазин, онлайн-банк, etc
+			</p>
+		</section>
+
+		<!--
+		<section class="slide">
+			<p>
+				<b>Системный код</b> - код, который нужен для работы другого кода. Библиотеки, фреймворки, утилиты, etc
+			</p>
+			<p style="opacity:20%">
+				<b>Прикладной код</b> - программа для решения задач предметной области. Сервис доставки, интернет-магазин, онлайн-банк, etc
+			</p>
+		</section>
+		-->
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/system-vs-application.jpg" alt="Акцент на системном коде">
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/like-kung-fu-masters.jpg" alt="Кадр из Кунг-фу Панды">
+				<figcaption class="copyright">
+					<a href="https://www.kinopoisk.ru/picture/651319/" target="blank">
+						kinopoisk.ru/picture/651319/
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/dragon-scroll.jpg" alt="Кадр из Кунг-фу Панды: свиток дракона">
+				<figcaption class="copyright">
+					<a href="https://www.ivi.ru/watch/462652" target="blank">
+						ivi.ru/watch/462652
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img style="width:40%" class="cover" src="pictures/ts.png" alt="Логотип TypeScript">
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Трезвый взгляд<br> на TypeScript</h2>
+		</section>
+
+		<section class="slide" style="padding-top:150px">
+			<img width="350" src="pictures/ts-npm.jpg" alt="Количество скачиваний TypeScript в npm">
+		</section>
+
+		<section class="slide" style="padding-top:150px">
+			<img width="350" src="pictures/ts-npm.jpg" alt="Количество скачиваний TypeScript в npm">
+			<img width="450" src="pictures/ts-stars.jpg" alt="Количество звезд на Github у TypeScript">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/complex-type.jpg" alt="Код с трехэтажным типом на TS">
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/ts-doom.jpg" alt="Обложка видео про Doom на типах TS">
+				<figcaption class="copyright">
+					<a href="https://www.youtube.com/watch?v=0mCsluv5FXA" target="blank">
+						youtube.com/watch?v=0mCsluv5FXA
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/state-of-js-stats.jpg" alt="Скриншот из последнего State of JS">
+				<figcaption class="copyright" style="right:0;opacity:40%">
+					<a href="https://2024.stateofjs.com/en-US/usage/#js_ts_balance" target="blank">
+						2024.stateofjs.com/en-US/usage/#js_ts_balance
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<figure style="padding-left:65px">
+				<blockquote style="font-size:32px">
+					<p>
+						<b>67%</b> of respondents stated they write more TypeScript than JavaScript code – while the single largest group consisted of people who only write TypeScript.
+					</p>
+				</blockquote>
+				<figcaption>State of JS</figcaption>
+			</figure>
+			<a href="https://2024.stateofjs.com/en-US/usage/#js_ts_balance" target="blank"><small>Источник</small></a>
+		</section>
+
+		<section class="slide">
+			<h2>Мастера, которые пишут на JS</h2>
+			<ul>
+				<li><b>Matteo Collina</b>: Node.js, Fastify, Pino</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/fastify-proof.jpg" alt="На чем написан Fastify">
+		</section>
+
+		<section class="slide">
+			<h2>Мастера, которые пишут на JS</h2>
+			<ul>
+				<li><b>Matteo Collina</b>: Node.js, Fastify, Pino</li>
+				<li><b>Rich Harris</b>: Rollup, Svelte</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/svelte-proof.jpg" alt="На чем написан Svelte">
+		</section>
+
+		<section class="slide">
+			<h2>Мастера, которые пишут на JS</h2>
+			<ul>
+				<li><b>Matteo Collina</b>: Node.js, Fastify, Pino</li>
+				<li><b>Rich Harris</b>: Rollup, Svelte</li>
+				<li><b>Sindre Sorhus</b>: половина npm</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/sindre-proof.jpg" alt="На чем пишет Sindre">
+		</section>
+
+		<section class="slide">
+			<h2>Мастера, которые пишут на JS</h2>
+			<ul>
+				<li><b>Matteo Collina</b>: Node.js, Fastify, Pino</li>
+				<li><b>Rich Harris</b>: Rollup, Svelte</li>
+				<li><b>Sindre Sorhus</b>: половина npm</li>
+				<li><b>Тимур Шемсединов</b>: Metarhia</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - про надежность?</h2>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - про надежность?</h2>
+			<p>
+				<b>Soundness</b> - свойство системы типов, при котором, скомпилированная программа гарантированно не имеет ошибок, связанных с типами данных
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - про надежность?</h2>
+			<p>
+				<b>Soundness</b> - свойство системы типов, при котором, скомпилированная программа гарантированно не имеет ошибок, связанных с типами данных
+			</p>
+			<p><b>Unsound</b> - антоним soundness</p>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - про надежность?</h2>
+			<p style="opacity:20%">
+				<b>Soundness</b> - свойство системы типов, при котором, скомпилированная программа гарантированно не имеет ошибок, связанных с типами данных
+			</p>
+			<p><b>Unsound</b> - антоним soundness</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/ts-goals-unsound.jpg" alt="Скриншот из вики TS, что нет цели делать soundness">
+				<figcaption class="copyright">
+					<a href="https://github.com/microsoft/TypeScript/wiki/TypeScript-Design-Goals#non-goals" target="blank">
+						github.com/microsoft/TypeScript/wiki/TypeScript-Design-Goals#non-goals
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/vovka.jpg" alt="Вовка в тридевятом царстве">
+				<figcaption class="copyright">
+					<a href="https://premier.one/show/vovka-v-tridevjatom-tsarstve" target="blank">
+						premier.one/show/vovka-v-tridevjatom-tsarstve
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/ts-goals-balance.jpg" alt="Скриншот из вики TS, что нет цели делать soundness">
+				<figcaption class="copyright">
+					<a href="https://github.com/microsoft/TypeScript/wiki/TypeScript-Design-Goals#non-goals" target="blank">
+						github.com/microsoft/TypeScript/wiki/TypeScript-Design-Goals#non-goals
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/no-spec.jpg" alt="Заброшенная спека TS">
+				<figcaption class="copyright">
+					<a href="https://github.com/microsoft/TypeScript/blob/release-4.0/doc/spec.md" target="blank">
+						github.com/microsoft/TypeScript/blob/release-4.0/doc/spec.md
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/starovoit.jpg" alt="Обложка подкаста с Андреем Старовойтом">
+				<figcaption class="copyright">
+					<a href="https://youtu.be/kxxooYU5hN8?si=1nun3NDSQucUBPSE&t=515" target="blank">
+						youtu.be/kxxooYU5hN8?si=1nun3NDSQucUBPSE&amp;t=515
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<!--
+		<section class="slide">
+			<h2>Спецификация TypeScript</h2>
+			<p>
+				Почему ее нет
+			</p>
+		</section>
+		-->
+
+		<section class="slide">
+			<p style="font-size:42px" class="shout">TypeScript повышает продуктивность?</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/klimov.jpg" alt="Обложка доклада Климова про TypeScript">
+				<figcaption class="copyright">
+					<a href="https://youtu.be/H9-F8uhKMRk?si=3JWcs7l-g9o7hL2x" target="blank">
+						youtu.be/H9-F8uhKMRk?si=3JWcs7l-g9o7hL2x
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/more-pros.jpg" alt="Но плюсов, то у TS больше!">
+		</section>
+
+		<section class="slide">
+			<h2>Главные плюсы TypeScript</h2>
+			<ul>
+				<li>Контракты</li>
+				<li>Статический анализ</li>
+				<li>Подсказки</li>
+				<li>... и другие фичи IDE</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - не только язык</h2>
+			<ul>
+				<li>Язык</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - не только язык</h2>
+			<ul>
+				<li>Язык</li>
+				<li>Компилятор</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - не только язык</h2>
+			<ul>
+				<li>Язык</li>
+				<li>Компилятор</li>
+				<li>Language server</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/lang-server.jpg" alt="Скриншот кода с автокомплитом">
+		</section>
+
+		<!--
+class Tenant {
+  readonly token = crypto.randomUUID();
+  readonly id = Math.random().toString(36).slice(2);
+}
+
+const user = new Tenant();
+				-->
+
+		<section class="slide">
+			<h2>TypeScript - не только язык</h2>
+			<ul>
+				<li>Язык</li>
+				<li>Компилятор</li>
+				<li>Language server</li>
+				<li>Типы стандартной библиотеки JS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>TypeScript - не только язык</h2>
+			<ul>
+				<li style="opacity:20%">Язык</li>
+				<li style="opacity:20%">Компилятор</li>
+				<li>Language server</li>
+				<li>Типы стандартной библиотеки JS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>А что если...</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<div>
+					<b>Возможности</b>
+					<ul>
+						<li>Language server</li>
+						<li>Definition Types</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>А что если...</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<div>
+					<b>Возможности</b>
+					<ul>
+						<li>Language server</li>
+						<li>Definition Types</li>
+					</ul>
+				</div>
+				<div>
+					<strong>Сильные стороны</strong>
+					<ul>
+						<li>Контракты</li>
+						<li>Статический анализ</li>
+						<li>Функционал IDE</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/fastify-proof-ts.jpg" alt="Typescript в Fastify">
+				<figcaption class="copyright">
+					<a href="https://github.com/fastify/fastify" target="blank">
+						github.com/fastify/fastify
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/svelte-proof-ts.jpg" alt="Typescript в Svelte">
+				<figcaption class="copyright">
+					<a href="https://github.com/sveltejs/svelte/tree/main/packages/svelte" target="blank">
+						github.com/sveltejs/svelte/tree/main/packages/svelte
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/chipmunk.jpg" alt="Dramatic Chipmunk">
+				<figcaption class="copyright">
+					<a href="https://youtu.be/pBuIkb2xk4k?si=meLQINpuk82QgS2U" target="blank">
+						youtu.be/pBuIkb2xk4k?si=meLQINpuk82QgS2U
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/dragon-scroll.jpg" alt="Кадр из Кунг-фу Панды: свиток дракона">
+				<figcaption class="copyright">
+					<a href="https://www.ivi.ru/watch/462652" target="blank">
+						ivi.ru/watch/462652
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Повод(ы)<br> не писать<br> на TypeScript</h2>
+		</section>
+
+		<!--
+		<section class="slide">
+			<p>Про причины и повод</p>
+		</section>
+		-->
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/node-backend.png" alt="Бэкенд инфраструктура в AWS">
+				<figcaption class="copyright">
+					<a href="https://universe.roboflow.com/aws-icons/aws-icon-detector/images/SjIsvcDS5bfm6yFs5D26" target="blank">
+						universe.roboflow.com/aws-icons/aws-icon-detector/images/SjIsvcDS5bfm6yFs5D26
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/ddd-book.jpg" alt="Синяя книга про DDD">
+				<figcaption class="copyright">
+					<a href="https://www.logobook.ru/prod_show.php?object_uid=11130793" target="blank">
+						logobook.ru/prod_show.php?object_uid=11130793
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/value-object.jpg" alt="Пример value object в коде">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/entity-with-val-object.jpg" alt="Пример value object в коде">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/using-base-entity.jpg" alt="Создание сущности из DTO">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/translator-entity.jpg" alt="Translator entity использует базовый класс Entity">
+			<div style="top: 0;left: 385px;width: 80px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/translator-entity.jpg" alt="Translator entity использует базовый класс Entity">
+			<div style="top: 182px;left: 525px;width: 190px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/translator-entity.jpg" alt="Translator entity использует базовый класс Entity">
+			<div style="top: 365px;left: 357px;width: 265px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/translator-entity.jpg" alt="Translator entity использует базовый класс Entity">
+			<div style="top: 443px;left: 332px;width: 292px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/entity-how-typing.jpg" alt="Ошибка типизации в Entity">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/entity-one-ts-ignore.jpg" alt="ts-ignore в Entity">
+			<div style="top: 200px;left: 98px;width: 95px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/entity-failed-types.jpg" alt="Ошибки типизации в Entity">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/from-json-use.jpg" alt="Создание сущности из JSON">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/from-json-js.jpg" alt="JS код fromJson">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/from-json-fail.jpg" alt="Неудачная попытка типизации fromJson">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/from-json-win.jpg" alt="Типизированный fromJson">
+		</section>
+
+<!--
+export class Email {
+	private static readonly validationRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  constructor(readonly value: string) {
+    if (Email.validationRegex.test(value)) {
+      this.value = value;
+    } else {
+      throw new Error('Invalid email format');
+    }
+  }
+
+	//...
+}
+
+class Translator {
+	readonly id!: number;
+  readonly email!: Email;
+
+	//...
+}
+
+const translatorDto = await translatorRepository.get(translatorId);
+/*
+	{
+		id: 150,
+		email: 'im@150.lv',
+		...
+	}
+*/
+
+const mister = new Translator(translatorDto);
+/*
+  Translator {
+    id: 150,
+    email: Email { value: 'im@150.lv' },
+		...
+	}
+*/
+	-->
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/harold.jpg" alt="Hide pain Harold">
+				<figcaption class="copyright">
+					<a href="https://imgflip.com/memetemplate/75105871/Hide-the-pain-harold" target="blank">
+						imgflip.com/memetemplate/75105871/Hide-the-pain-harold
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<!--
+
+class Fly {
+	constructor(public name:string) {};
+	//..
+}
+
+class Cutlet {
+	constructor(public taste:string) {};
+	//..
+}
+
+function doSomething(item: Cutlet | Fly) {
+	if (item instanceof Fly) {
+		console.log(item.name);
+	} else {
+		console.log(item.taste);
+	}
+}
+
+doSomething({ name: 'BoBaH' });
+				-->
+
+		<section class="slide">
+			<h2>Структурная типизация</h2>
+			<p>Совместимость типов определяется по их структуре, а не по имени или месту объявления</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/structural-type0.jpg" alt="Проблемный кейс">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/structural-type1.jpg" alt="Проблемный кейс">
+		</section>
+
+		<!--
+				async function fetchItems(target: 'flies'): Promise<Fly[]>
+async function fetchItems(target: 'cutlets'): Promise<Cutlet[]>
+async function fetchItems(target: 'flies' | 'cutlets'): Promise<Array<Fly | Cutlet>> {
+	const items = await fetch('https://ourapi.com/' + target)
+		.then((r) => r.json())
+		.then((r) => r);
+	// ...
+	return items;
+}
+
+async function appendItems(
+	list: Array<Cutlet | Fly>,
+	asyncList: Promise<Array<Cutlet | Fly>>,
+) {
+	list.push(...(await asyncList));
+}
+
+const cultets: Cutlet[] = [new Cutlet('soy') /*...*/];
+await appendItems(cultets, fetchItems('flies'));
+
+for (const item of cultets) {
+	console.log(item.taste);
+}
+				-->
+
+		<section class="slide">
+			<h2>Вариативность типов</h2>
+			<p>Возможность использовать более надтип или подтип там, где используется оригинальный тип</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/type-variance0.jpg" alt="Проблемный кейс">
+			<div style="top: 110px;left: 210px;width: 117px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/type-variance0.jpg" alt="Проблемный кейс">
+			<div style="top: 298px;left: 210px;width: 130px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/type-variance0.jpg" alt="Проблемный кейс">
+			<div style="top: 485px;left: 108px;width: 130px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/type-variance1.jpg" alt="Проблемный кейс">
+			<div style="top: 409px;left: 364px;width: 135px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/type-variance-fixed.jpg" alt="Проблемный кейс">
+		</section>
+
+		<section class="slide">
+			<h2>Ограничения системы типов TS</h2>
+			<p>Что-то вообще нельзя типизировать</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/0.jpg" alt="Проблемный кейс(ы)">
+		</section>
+
+		<section class="slide">
+			<h2>Баги TS</h2>
+			<p>Подробности</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/0.jpg" alt="Проблемный кейс(ы)">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/0.jpg" alt="Что не так с этим кодом? (перфоманс)">
+		</section>
+
+		<section class="slide">
+			<h2>Потенциал для снижения перфоманса</h2>
+			<p>Подробности</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/0.jpg" alt="Пруф">
+		</section>
+
+		<section class="slide">
+			<h2>Наличие этапа сборки</h2>
+			<p>
+				Подробности
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Кейсы мастеров</h2>
+			<ul>
+				<li><a href="https://github.com/postcss/postcss" target="blank">PostCSS</a></li>
+				<li><a href="https://devclass.com/2023/05/11/typescript-is-not-worth-it-for-developing-libraries-says-svelte-author-as-team-switches-to-javascript-and-jsdoc/" target="blank">Svelte</a></li>
+				<li><a href="https://docs.google.com/document/d/1_WvwHl7BXUPmoiSeD8G83JmS8ypsTPqed4Btkqkn_-4/preview?pru=AAABcrrKL5k*nQ4LS569NsRRAce2BVanXw&tab=t.0" target="blank">Deno</a></li>
+				<li><a href="https://world.hey.com/dhh/turbo-8-is-dropping-typescript-70165c01" target="blank">Turbo8</a></li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Резюме</h2>
+			<ul>
+				<li>Пишем 3х-этажные типы, либо <code>@ts-expect-error</code></li>
+				<li>Не факт, что сможем типизировать</li>
+				<li>Часто не влияют на публичный API</li>
+				<li>Не дают никаких гарантий (unsound)</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/dragon-scroll.jpg" alt="Кадр из Кунг-фу Панды: свиток дракона">
+				<figcaption class="copyright">
+					<a href="https://www.ivi.ru/watch/462652" target="blank">
+						ivi.ru/watch/462652
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Что делать?</h2>
+		</section>
+
+		<!--
+		<section class="slide">
+			<p>
+				Кто виноват?
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				Кто виноват?
+			</p>
+			<p>Что делать</p>
+		</section>
+
+		<section class="slide">
+			<p style="opacity:20%">
+				Кто виноват?
+			</p>
+			<p>Что делать</p>
+		</section>
+		-->
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/svelte-tsconfig.jpg" alt="Открываем tsconfig в Svelte">
+				<figcaption class="copyright">
+					<a href="https://github.com/sveltejs/svelte/tree/main/packages/svelte" target="blank">
+						github.com/sveltejs/svelte/tree/main/packages/svelte
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Language Server</h2>
+			<p>Ставим ts, jsconfig.json, etc</p>
+		</section>
+
+		<section class="slide">
+			<h2>Контракты и аннотации</h2>
+			<ul>
+				<li><code>.d.ts</code></li>
+				<li>JSDoc</li>
+				<li><code>.d.ts</code> + JSDoc</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2><code>.d.ts</code></h2>
+			<p>Подробности</p>
+		</section>
+
+		<section class="slide">
+			<h2>JSDoc</h2>
+			<p>Подробности</p>
+		</section>
+
+		<section class="slide">
+			<h2><code>.d.ts</code> + JSDoc</h2>
+			<p>Подробности</p>
+		</section>
+
+		<section class="slide">
+			<h2>Настройки тайпчекинга</h2>
+			<p>Подробности</p>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/0.jpg" alt="Примеры работы сетапа">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/0.jpg" alt="Мем: JSDoc в 2025?">
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/tai-lung-scroll.jpg" alt="Кадр из Кунг-фу Панды: Тай-лунг открывает свиток дракона">
+				<figcaption class="copyright">
+					<a href="https://www.ivi.ru/watch/462652" target="blank">
+						ivi.ru/watch/462652
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/no-secrets.jpg" alt="Кадр из Кунг-фу Панды: свиток дракона">
+				<figcaption class="copyright">
+					<a href="https://www.ivi.ru/watch/462652" target="blank">
+						ivi.ru/watch/462652
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Что мы получили</h2>
+			<ul>
+				<li>Контракты</li>
+				<li>Фичи IDE в любом редакторе</li>
+				<li>Отсутствие сборки</li>
+				<li>...</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Заключение</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Альтернативный способ работы с TS</h2>
+			<ul>
+				<li>Пишем логику на JS</li>
+				<li>Пишем типы отдельно</li>
+				<li>...</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Хорошо подойдет</h2>
+			<ul>
+				<li>Системный код</li>
+				<li>Существующий большой проект на JS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Подойдет хуже</h2>
+			<ul>
+				<li>Стандартный проект</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Выводы</h2>
+			<ul>
+				<li>Большинство может быть неправо в чем-то</li>
+				<li>Ищите самых умных несогласных</li>
+				<li>Пробуйте смотреть на привычные вещи под другим углом</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Вопросы?</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<div>
+					<em>Валентин Ульянов</em>
+
+					<ul class="decor-list">
+						<li value="👋"><a href="https://150.lv" target="blank">150.lv</a></li>
+						<li value="📢"><a href="https://t.me/blog150" target="blank">t.me/blog150</a></li>
+						<li value="⭐"><a href="https://github.com/mr150/mlut" target="blank">github.com/mr150</a></li>
+					</ul>
+					<span>
+						Презентация: <a href="https://150.lv/t/ts" target="blank">150.lv/t/ts</a>
+					</span>
+				</div>
+				<div>
+					<div style="margin-bottom: 16px">Телеграм-канал:</div>
+					<a style="background: none" href="https://t.me/+GCmbEsAjfF8wODAy" target="blank">
+						<img width="250" src="../shared/pictures/qr-channel.png" alt="qr-код на телеграм канал">
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<footer class="badge">
+			<a href="https://github.com/shower/shower">Powered by Shower</a>
+		</footer>
+
+		<div class="progress"></div>
+
+		<script src="../shared/shower/shower.js"></script>
+	</body>
+</html>
