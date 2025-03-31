@@ -622,16 +622,24 @@ const mister = new Translator(translatorDto);
 			</figure>
 		</section>
 
-		<!--
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/math-lady-meme.jpg" alt="Math lady">
+				<figcaption class="copyright">
+					<a href="https://media.2x2tv.ru/mems-so-difficult/" target="blank">
+						media.2x2tv.ru/mems-so-difficult/
+					</a>
+				</figcaption>
+			</figure>
+		</section>
 
+		<!--
 class Fly {
-	constructor(public name:string) {};
-	//..
+	constructor(public name: string) {};
 }
 
 class Cutlet {
-	constructor(public taste:string) {};
-	//..
+	constructor(public taste: string) {};
 }
 
 function doSomething(item: Cutlet | Fly) {
@@ -642,7 +650,7 @@ function doSomething(item: Cutlet | Fly) {
 	}
 }
 
-doSomething({ name: 'BoBaH' });
+doSomething({ name: 'Tsokotoukha' });
 				-->
 
 		<section class="slide">
@@ -685,8 +693,42 @@ for (const item of cultets) {
 				-->
 
 		<section class="slide">
-			<h2>Вариативность типов</h2>
-			<p>Возможность использовать более надтип или подтип там, где используется оригинальный тип</p>
+			<h2>Вариантность типов</h2>
+			<p>Сохранение совместимости присваивания исходных типов у производных от них типов</p>
+		</section>
+
+		<section class="slide">
+			<h2>Вариантность типов</h2>
+			<p>Сохранение совместимости присваивания исходных типов у производных от них типов</p>
+			<p>Возможность использовать надтип или подтип там, где используется исходный тип</p>
+		</section>
+
+		<section class="slide">
+			<h2>Вариантность типов</h2>
+			<p>Сохранение совместимости присваивания исходных типов у производных от них типов</p>
+			<p><b>Ковариантность</b> - в прямом порядке</p>
+		</section>
+
+		<section class="slide">
+			<h2>Вариантность типов</h2>
+			<p>Сохранение совместимости присваивания исходных типов у производных от них типов</p>
+			<p><b>Ковариантность</b> - в прямом порядке</p>
+			<p><b>Контрвариантность</b> - в обратном порядке</p>
+		</section>
+
+		<section class="slide">
+			<h2>Вариантность типов</h2>
+			<p>Сохранение совместимости присваивания исходных типов у производных от них типов</p>
+			<p><b>Ковариантность</b> - в прямом порядке</p>
+			<p style="opacity:20%"><b>Контрвариантность</b> - в обратном порядке</p>
+		</section>
+
+		<section class="slide">
+			<h2>Вариантность типов</h2>
+			<p>Сохранение совместимости присваивания исходных типов у производных от них типов</p>
+			<p style="opacity:20%"><b>Ковариантность</b> - в прямом порядке</p>
+			<p style="opacity:20%"><b>Контрвариантность</b> - в обратном порядке</p>
+			<p><a href="https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Type%20Compatibility.md#function-parameter-bivariance" target="blank">Бивариативность</a> - в обе стороны</p>
 		</section>
 
 		<section class="slide slide--no-number">
@@ -714,21 +756,101 @@ for (const item of cultets) {
 		</section>
 
 		<section class="slide">
-			<h2>Ограничения системы типов TS</h2>
-			<p>Что-то вообще нельзя типизировать</p>
+			<h2>Ограничения TS</h2>
+			<ul>
+				<li>Недостаточная выразитильность системы типов</li>
+				<li>Запрет на использование</li>
+				<li>Отсутствие возможности типизировать</li>
+			</ul>
+		</section>
+
+		<!--
+class PromptGenerator {
+	constructor(
+		public readonly kind: string
+	) {
+		return new Promise<PromptGenerator>((resolve) => {
+			setTimeout(() => resolve(this), 1000);
+		});
+	}
+}
+
+const promptGenerator = await new PromptGenerator('image');
+console.log(promptGenerator.kind);
+			-->
+
+		<!--
+class PromptGenerator {
+	private constructor(
+		public readonly kind: string
+	) {}
+
+	static async create(kind: string) {
+		return new Promise<PromptGenerator>((resolve) => {
+			setTimeout(() => resolve(new PromptGenerator(kind)), 1000);
+		});
+	}
+}
+
+const promptGenerator = await PromptGenerator.create('image');
+console.log(promptGenerator.kind);
+			-->
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/async-construct-ts.jpg" alt="Проблемный кейс(ы)">
 		</section>
 
 		<section class="slide slide--no-number">
-			<img class="cover" src="pictures/0.jpg" alt="Проблемный кейс(ы)">
+			<img class="cover" src="pictures/async-construct-ts-hack.jpg" alt="Костыльное решение">
+			<div style="top: 125px;left: 130px;width: 105px;height: 25px;" class="highlight"></div>
 		</section>
 
-		<section class="slide">
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/async-construct-ts-hack.jpg" alt="Костыльное решение">
+			<div style="top: 233px;left: 300px;width: 90px;height: 25px;" class="highlight"></div>
+		</section>
+
+		<section class="slide" style="padding-top:30px">
 			<h2>Баги TS</h2>
-			<p>Подробности</p>
+			<img width="430" src="pictures/ts-bugs-count.jpg" alt="Количество багов в TypeScript">
+		</section>
+
+		<!--
+				class A {};
+				const a: A = 1;
+
+				// Cannot read properties of undefined (reading 'slice')
+				JSON.stringify(undefined).slice(0)
+
+				type Arr = Array<number> | [] | [string];
+
+				declare const arr: Arr;
+
+				const [a] = arr;
+				a.toString();
+
+				const b = arr[0];
+				b.toString();
+
+		-->
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/funny-ts-bugs-meme.jpg" alt="Смешные баги в TS">
 		</section>
 
 		<section class="slide slide--no-number">
-			<img class="cover" src="pictures/0.jpg" alt="Проблемный кейс(ы)">
+			<img class="cover" src="pictures/danger-ts-bug.jpg" alt="Серьезный баг в TS">
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/wrong-suggest.jpg" alt="Неверная подсказка TS">
+				<figcaption class="copyright">
+					<a href="https://github.com/microsoft/TypeScript/issues/61462" target="blank">
+						github.com/microsoft/TypeScript/issues/61462
+					</a>
+				</figcaption>
+			</figure>
 		</section>
 
 		<section class="slide slide--no-number">
@@ -746,19 +868,92 @@ for (const item of cultets) {
 
 		<section class="slide">
 			<h2>Наличие этапа сборки</h2>
-			<p>
-				Подробности
-			</p>
+			<ul>
+				<li>Нельзя установить пакет из ветки/коммита на гитхабе</li>
+				<li>Проблематично дебажить инструмент на проде и переносить фиксы</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/postcss-case.jpg" alt="Репозиторий PostCSS">
+				<figcaption class="copyright">
+					<a href="https://github.com/postcss/postcss" target="blank">
+						github.com/postcss/postcss
+					</a>
+				</figcaption>
+			</figure>
 		</section>
 
 		<section class="slide">
 			<h2>Кейсы мастеров</h2>
 			<ul>
-				<li><a href="https://github.com/postcss/postcss" target="blank">PostCSS</a></li>
-				<li><a href="https://devclass.com/2023/05/11/typescript-is-not-worth-it-for-developing-libraries-says-svelte-author-as-team-switches-to-javascript-and-jsdoc/" target="blank">Svelte</a></li>
-				<li><a href="https://docs.google.com/document/d/1_WvwHl7BXUPmoiSeD8G83JmS8ypsTPqed4Btkqkn_-4/preview?pru=AAABcrrKL5k*nQ4LS569NsRRAce2BVanXw&tab=t.0" target="blank">Deno</a></li>
-				<li><a href="https://world.hey.com/dhh/turbo-8-is-dropping-typescript-70165c01" target="blank">Turbo8</a></li>
+				<li><a href="https://github.com/postcss/postcss" target="blank">PostCSS</a> - типы отдельно</li>
 			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Кейсы мастеров</h2>
+			<ul>
+				<li><a href="https://github.com/postcss/postcss" target="blank">PostCSS</a> - типы отдельно</li>
+				<li><a href="https://devclass.com/2023/05/11/typescript-is-not-worth-it-for-developing-libraries-says-svelte-author-as-team-switches-to-javascript-and-jsdoc/" target="blank">Svelte</a> - TS -> JSDoc</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/svelte-ts2jsdoc.jpg" alt="PR в Svelte с зменой TS на JSDoc">
+				<figcaption class="copyright">
+					<a href="https://github.com/sveltejs/svelte/pull/8569" target="blank">
+						github.com/sveltejs/svelte/pull/8569
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Кейсы мастеров</h2>
+			<ul>
+				<li><a href="https://github.com/postcss/postcss" target="blank">PostCSS</a> - типы отдельно</li>
+				<li><a href="https://devclass.com/2023/05/11/typescript-is-not-worth-it-for-developing-libraries-says-svelte-author-as-team-switches-to-javascript-and-jsdoc/" target="blank">Svelte</a> - TS -> JSDoc</li>
+				<li><a href="https://docs.google.com/document/d/1_WvwHl7BXUPmoiSeD8G83JmS8ypsTPqed4Btkqkn_-4/preview?pru=AAABcrrKL5k*nQ4LS569NsRRAce2BVanXw&tab=t.0" target="blank">Deno</a> - TS -> JS</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/deno-ts2js.jpg" alt="PR в Deno с зменой TS на JS">
+				<figcaption class="copyright">
+					<a href="https://github.com/denoland/deno/pull/6793" target="blank">
+						github.com/denoland/deno/pull/6793
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" style="width:48%" src="pictures/deno-profits.jpg" alt="PR в Deno с зменой TS на JS">
+		</section>
+
+		<section class="slide">
+			<h2>Кейсы мастеров</h2>
+			<ul>
+				<li><a href="https://github.com/postcss/postcss" target="blank">PostCSS</a> - типы отдельно</li>
+				<li><a href="https://devclass.com/2023/05/11/typescript-is-not-worth-it-for-developing-libraries-says-svelte-author-as-team-switches-to-javascript-and-jsdoc/" target="blank">Svelte</a> - TS -> JSDoc</li>
+				<li><a href="https://docs.google.com/document/d/1_WvwHl7BXUPmoiSeD8G83JmS8ypsTPqed4Btkqkn_-4/preview?pru=AAABcrrKL5k*nQ4LS569NsRRAce2BVanXw&tab=t.0" target="blank">Deno</a> - TS -> JS</li>
+				<li><a href="https://world.hey.com/dhh/turbo-8-is-dropping-typescript-70165c01" target="blank">Turbo</a> - TS -> JS</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="pictures/turbo-ts2js.jpg" alt="PR в Turbo с зменой TS на JS">
+				<figcaption class="copyright">
+					<a href="https://github.com/hotwired/turbo/pull/971" target="blank">
+						github.com/hotwired/turbo/pull/971
+					</a>
+				</figcaption>
+			</figure>
 		</section>
 
 		<section class="slide">
@@ -821,7 +1016,39 @@ for (const item of cultets) {
 
 		<section class="slide">
 			<h2>Language Server</h2>
-			<p>Ставим ts, jsconfig.json, etc</p>
+			<ul>
+				<li><code>npm i -D typescript</code></li>
+				<li><b>js</b>config.json</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/jsconfig-basic.jpg" alt="Пример jsconfig">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/jsconfig-paths.jpg" alt="Пример jsconfig">
+		</section>
+
+		<section class="slide">
+			<h2>Контракты и аннотации</h2>
+			<ul>
+				<li><code>.d.ts</code></li>
+			</ul>
+		</section>
+
+		<!--
+		<section class="slide">
+			<img class="cover" src="pictures/d.ts.jpg" alt="Описание типов отдельно в .d.ts">
+		</section>
+		-->
+
+		<section class="slide">
+			<h2>Контракты и аннотации</h2>
+			<ul>
+				<li><code>.d.ts</code></li>
+				<li>JSDoc</li>
+			</ul>
 		</section>
 
 		<section class="slide">
@@ -835,22 +1062,100 @@ for (const item of cultets) {
 
 		<section class="slide">
 			<h2><code>.d.ts</code></h2>
-			<p>Подробности</p>
+			<img width="585" src="pictures/d.ts.jpg" alt="Описание типов отдельно в .d.ts">
 		</section>
+
+		<!--
+/** @typedef {import('./Hyperlink.js').HyperlinkDto} HyperlinkDto */
+
+/** @typedef {{
+			getValue: () => string,
+			getTooltip: () => string,
+}} HyperlinkDto
+*/
+
+/**
+ * @implements {HyperlinkDto}
+ * @arg {object} data
+ */
+class HlinkClickDto {
+	constructor(data) {
+		//...
+	}
+
+	getValue = () => '150.lv';
+
+	getTooltip = () => '150';
+}
+
+				<li>Есть TS-специфичные аннотации: <code>@template</code>, <code>@satisfies</code></li>
+console.log(HlinkClickDto);
+			-->
 
 		<section class="slide">
 			<h2>JSDoc</h2>
-			<p>Подробности</p>
+			<ul>
+				<li>Учитываются типы из JSDoc</li>
+				<li>Ограниченный набор аннотаций + TS-специфичные: <code>@template</code></li>
+				<li>Можно использовать синтаксис TS в аннотациях</li>
+				<li>Можно импортировать типы!</li>
+			</ul>
 		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/jsdoc-class-err.jpg" alt="Описание типов отдельно в jsdoc">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/jsdoc-class.jpg" alt="Описание типов отдельно в jsdoc">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/jsdoc-import.jpg" alt="Описание типов отдельно в jsdoc">
+		</section>
+
+		<!--
+/**
+ * Складывает два числа
+ * @example
+ * ```typescript
+ * sum(2, 3) // returns 5
+ * sum(-1, 1) // returns 0
+ * ```
+ * @param a - Первое слагаемое
+ * @param b - Второе слагаемое
+ * @returns - Сумма двух чисел
+*/
+export declare function sum(a: number, b: number): number;
+		-->
 
 		<section class="slide">
 			<h2><code>.d.ts</code> + JSDoc</h2>
-			<p>Подробности</p>
+			<ul>
+				<li>Продвинутые подсказки</li>
+				<li>Не загромождаем код типами</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/dts-jsdoc.jpg" alt="Описание типов отдельно в d.ts с jsdoc">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/dts-jsdoc-hint0.jpg" alt="Описание типов отдельно в d.ts с jsdoc">
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/dts-jsdoc-hint1.jpg" alt="Описание типов отдельно в d.ts с jsdoc">
 		</section>
 
 		<section class="slide">
-			<h2>Настройки тайпчекинга</h2>
-			<p>Подробности</p>
+			<h2>Тайпчекинг</h2>
+			<ul>
+				<li><code>"checkJs": true</code> в jsconfig.json</li>
+				<li>Опциональный</li>
+				<li><code>//@ts-nocheck</code> для сложных модулей</li>
+			</ul>
 		</section>
 
 		<section class="slide slide--no-number">
@@ -858,7 +1163,14 @@ for (const item of cultets) {
 		</section>
 
 		<section class="slide slide--no-number">
-			<img class="cover" src="pictures/0.jpg" alt="Мем: JSDoc в 2025?">
+			<figure>
+				<img class="cover" src="pictures/jsdoc-in-2025.jpg" alt="Мем: JSDoc в 2025?">
+				<figcaption class="copyright">
+					<a href="https://imgflip.com/memetemplate/6129044/serious-cat" target="blank">
+						imgflip.com/memetemplate/6129044/serious-cat
+					</a>
+				</figcaption>
+			</figure>
 		</section>
 
 		<section class="slide slide--no-number">
@@ -887,9 +1199,9 @@ for (const item of cultets) {
 			<h2>Что мы получили</h2>
 			<ul>
 				<li>Контракты</li>
-				<li>Фичи IDE в любом редакторе</li>
-				<li>Отсутствие сборки</li>
-				<li>...</li>
+				<li>Статический анализ</li>
+				<li>Функционал IDE в любом редакторе</li>
+				<li>Не требуется сборка</li>
 			</ul>
 		</section>
 
@@ -902,7 +1214,7 @@ for (const item of cultets) {
 			<ul>
 				<li>Пишем логику на JS</li>
 				<li>Пишем типы отдельно</li>
-				<li>...</li>
+				<li>Опциональная проверка типов</li>
 			</ul>
 		</section>
 
@@ -917,7 +1229,9 @@ for (const item of cultets) {
 		<section class="slide">
 			<h2>Подойдет хуже</h2>
 			<ul>
-				<li>Стандартный проект</li>
+				<li>Стандартный проект с нуля</li>
+				<li>Участники команды разных уровней</li>
+				<li>Низкая инженерная культура</li>
 			</ul>
 		</section>
 
