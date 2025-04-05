@@ -63,9 +63,8 @@ mark {
 .slide__author{
 	font-size: 36px;
 	line-height: 1.5;
-	text-align: right;
 	/*color: #fff;*/
-	margin: 0px !important;
+	margin: 0px 0 4px !important;
 }
 
 h3 {

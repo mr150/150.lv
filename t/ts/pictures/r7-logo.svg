@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="161" height="37" viewBox="0 0 161 37" fill="none"><script xmlns="">{
+            document.currentScript.dataset.injected = true;
+            const o = JSON.parse(decodeURIComponent(escape(atob('eyJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTMzLjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEzMy4wLjE4NzYuMTciLCJhcHBWZXJzaW9uIjoiNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzMuMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTMzLjAuMTg3Ni4xNyIsInBsYXRmb3JtIjoiV2luZG93cyIsInZlbmRvciI6Ikdvb2dsZSBJbmMuIiwicHJvZHVjdCI6IkdlY2tvIiwib3NjcHUiOiJbZGVsZXRlXSIsImJ1aWxkSUQiOiJbZGVsZXRlXSIsInByb2R1Y3RTdWIiOiIyMDAzMDEwNyIsInVzZXJBZ2VudERhdGFCdWlsZGVyIjp7InAiOnsidWEiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTMzLjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEzMy4wLjE4NzYuMTciLCJicm93c2VyIjp7Im5hbWUiOiJFZGdlIiwidmVyc2lvbiI6IjEzMy4wLjE4NzYuMTciLCJtYWpvciI6IjEzMyJ9LCJlbmdpbmUiOnsibmFtZSI6IkJsaW5rIiwidmVyc2lvbiI6IjEzMy4wLjAuMCJ9LCJvcyI6eyJuYW1lIjoiV2luZG93cyIsInZlcnNpb24iOiIxMCJ9LCJkZXZpY2UiOnt9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifX0sInVhIjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEzMy4wLjAuMCBTYWZhcmkvNTM3LjM2IEVkZy8xMzMuMC4xODc2LjE3In19'))));
+
+            if (o.userAgentDataBuilder) {
+              const v = new class NavigatorUAData {
+                #p;
+
+                constructor({p, ua}) {
+                  this.#p = p;
+
+                  const version = p.browser.major;
+                  const name = p.browser.name === 'Chrome' ? 'Google Chrome' : p.browser.name;
+
+                  this.brands = [{
+                    brand: name,
+                    version
+                  }, {
+                    brand: 'Chromium',
+                    version
+                  }, {
+                    brand: 'Not=A?Brand',
+                    version: '24'
+                  }];
+
+                  this.mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+
+                  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform
+                  this.platform = 'Unknown';
+                  if (p.os &amp;&amp; p.os.name) {
+                    const name = p.os.name.toLowerCase();
+                    if (name.includes('mac')) {
+                      this.platform = 'macOS';
+                    }
+                    else if (name.includes('debian')) {
+                      this.platform = 'Linux';
+                    }
+                    else {
+                      this.platform = p.os.name;
+                    }
+                  }
+                }
+                toJSON() {
+                  return {
+                    brands: this.brands,
+                    mobile: this.mobile,
+                    platform: this.platform
+                  };
+                }
+                getHighEntropyValues(hints) {
+                  if (!hints || Array.isArray(hints) === false) {
+                    return Promise.reject(Error("Failed to execute 'getHighEntropyValues' on 'NavigatorUAData'"));
+                  }
+
+                  const r = this.toJSON();
+
+                  if (hints.includes('architecture')) {
+                    r.architecture = this.#p?.cpu?.architecture || 'x86';
+                  }
+                  if (hints.includes('bitness')) {
+                    r.bitness = '64';
+                  }
+                  if (hints.includes('model')) {
+                    r.model = '';
+                  }
+                  if (hints.includes('platformVersion')) {
+                    r.platformVersion = this.#p?.os?.version || '10.0.0';
+                  }
+                  if (hints.includes('uaFullVersion')) {
+                    r.uaFullVersion = this.brands[0].version;
+                  }
+                  if (hints.includes('fullVersionList')) {
+                    r.fullVersionList = this.brands;
+                  }
+                  return Promise.resolve(r);
+                }
+              }(o.userAgentDataBuilder);
+
+              navigator.__defineGetter__('userAgentData', () =&gt; {
+                return v;
+              });
+            }
+            delete o.userAgentDataBuilder;
+
+            for (const key of Object.keys(o)) {
+              if (o[key] === '[delete]') {
+                delete Object.getPrototypeOf(window.navigator)[key];
+              }
+              else {
+                navigator.__defineGetter__(key, () =&gt; {
+                  if (o[key] === 'empty') {
+                    return '';
+                  }
+                  return o[key];
+                });
+              }
+            }
+          }</script><g clip-path="url(#clip0_2_312)"><path d="M24.8999 22.3L15.6999 13.1C14.7999 12.2 14.7999 10.8 15.6999 9.90002L24.8999 0.700024C25.7999 -0.199976 27.1999 -0.199976 28.0999 0.700024L37.2999 9.90002C38.1999 10.8 38.1999 12.2 37.2999 13.1L28.0999 22.3C27.1999 23.2 25.7999 23.2 24.8999 22.3Z" fill="url(#paint0_linear_2_312)"/><path d="M9.8999 36.3L0.699902 27.2C-0.200098 26.3 -0.200098 24.8 0.699902 23.9L9.8999 14.7C10.7999 13.8 12.1999 13.8 13.0999 14.7L22.2999 23.9C23.1999 24.8 23.1999 26.3 22.2999 27.2L13.0999 36.3C12.1999 37.2 10.7999 37.2 9.8999 36.3Z" fill="url(#paint1_linear_2_312)"/><path d="M39.8999 36.3L30.6999 27.2C29.7999 26.3 29.7999 24.8 30.6999 23.9L39.8999 14.7C40.7999 13.8 42.1999 13.8 43.0999 14.7L52.2999 23.9C53.1999 24.8 53.1999 26.3 52.2999 27.2L43.0999 36.3C42.1999 37.2 40.7999 37.2 39.8999 36.3Z" fill="url(#paint2_linear_2_312)"/><path d="M75.4 26.8L81.3 12.4C81.4 12.3 81.3 12.2 81.2 12.2H76C75.9 12.2 75.9 12.2 75.9 12.1L74 9.2C74 9.1 74 9 74.1 9H84.9C85 9 85 9.1 85 9.1V11.4L79 27C79 27.1 79 27.1 78.9 27.1H75.6C75.4 26.9 75.4 26.9 75.4 26.8Z" fill="white"/><path d="M84 20.8L85 18C85 17.9 85.1 17.9 85.1 17.9H89.9C90 17.9 90 18 90 18V20.8C90 20.9 90 20.9 89.9 20.9H84.1C84 20.9 84 20.9 84 20.8Z" fill="white"/><path d="M117.8 27V24.3H117.6C116.3 24.4 114.9 24.1 113.7 23.6C112.6 23 111.7 22.1 111 21C110.4 20 110 18.8 110.1 17.6C110.1 15.2 111.4 13.1 113.5 12C114.7 11.4 116 11.1 117.3 11.2H117.9V9H121.3V11.2H121.9C123.2 11.2 124.5 11.5 125.7 12C127.8 13.1 129.1 15.3 129 17.6C129 18.8 128.7 20 128.1 21C127.5 22.1 126.5 23 125.4 23.6C124.2 24.1 122.8 24.4 121.5 24.3H121.2V27H117.8ZM117.8 14H117.3C116.3 14 115.3 14.3 114.5 15C113.8 15.7 113.5 16.6 113.5 17.6C113.4 18.6 113.8 19.6 114.6 20.3C115.4 21 116.5 21.4 117.7 21.3H117.9L117.8 14ZM121.1 21.3H121.3C122.4 21.3 123.5 21 124.4 20.3C125.2 19.6 125.6 18.6 125.5 17.6C125.5 16.6 125.2 15.7 124.5 15C123.7 14.3 122.8 14 121.7 14H121.1V21.3Z" fill="white"/><path d="M108 17.9C108 20.8 107.4 23.2 106 24.7C104.4 26.3 102.2 27.2 100 27C97.8 27.1 95.6 26.3 94.1 24.7C92.8 23.2 92 20.8 92 17.9C92 15 92.7 12.8 94.1 11.3C95.6 9.69999 97.8 8.89999 100 8.99999C102.2 8.89999 104.3 9.69999 105.9 11.3C107.4 13.2 108.1 15.5 108 17.9ZM95.7 17.9C95.6 19.5 96 21.1 96.8 22.6C97.5 23.6 98.7 24.2 100 24.2C102.8 24.2 104.3 21.9 104.3 18C104.3 14.1 102.9 11.8 100.1 11.8C98.8 11.8 97.6 12.4 96.9 13.5C96 14.8 95.6 16.4 95.7 17.9Z" fill="white"/><path d="M74 14.5C74.1 16.2 73.4 17.9 72.1 19C70.5 20.1 68.6 20.6 66.7 20.5H65V27H61V8.99999H67C68.8 8.89999 70.7 9.39998 72.2 10.4C73.4 11.4 74.1 12.9 74 14.5ZM65 17.4H66.3C67.3 17.5 68.2 17.2 69.1 16.7C69.7 16.2 70.1 15.5 70 14.7C70.1 14 69.8 13.2 69.3 12.7C68.6 12.2 67.8 12 66.9 12.1H65V17.4Z" fill="white"/><path d="M131.1 9H134.3V17.6L134.2 19.9L134 22.5H134.1L141.8 9H146.1V27H143V18.3C143 17.1 143.1 15.5 143.2 13.2H143L135.3 27H131L131.1 9Z" fill="white"/><path d="M156 12.1C154.7 12 153.6 12.6 152.9 13.7C152.1 15 151.7 16.5 151.7 18C151.7 21.8 153.1 24.2 156 24.2C157.5 24.1 159 23.8 160.4 23.3V26.1C158.9 26.7 157.3 27 155.7 27C153.6 27.1 151.5 26.3 150.1 24.8C148.7 23.3 148.1 20.9 148.1 18.1C148.1 16.5 148.4 14.9 149.1 13.4C149.7 12.1 150.7 11 151.9 10.3C153.2 9.60001 154.6 9.20001 156.1 9.20001C157.8 9.20001 159.5 9.60001 161.1 10.4L160 13.4C159.4 13.1 158.7 12.8 158.1 12.6C157.3 12.2 156.6 12.1 156 12.1Z" fill="white"/></g><defs><linearGradient id="paint0_linear_2_312" x1="26.4999" y1="23.0016" x2="26.4999" y2="-0.00147604" gradientUnits="userSpaceOnUse"><stop stop-color="#FF8745"/><stop offset="1" stop-color="#D13700"/></linearGradient><linearGradient id="paint1_linear_2_312" x1="11.4999" y1="37.13" x2="11.4999" y2="14.0801" gradientUnits="userSpaceOnUse"><stop stop-color="#4EB7E5"/><stop offset="1" stop-color="#328BCB"/></linearGradient><linearGradient id="paint2_linear_2_312" x1="41.4999" y1="37.0301" x2="41.4999" y2="13.9901" gradientUnits="userSpaceOnUse"><stop stop-color="#9BDA32"/><stop offset="1" stop-color="#6EA70E"/></linearGradient><clipPath id="clip0_2_312"><rect width="161" height="37" fill="white"/></clipPath></defs></svg>
