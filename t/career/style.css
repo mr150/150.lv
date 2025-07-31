@@ -1,17 +1,19 @@
 .slide--first{
 	padding-top: 40px;
+	padding-bottom: 40px;
 	text-align: center;
 	display: flex;
+	color: #fff;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
 .slide--first h2 {
 	font-size: 85px;
+	color: #fff;
 }
 
 .slide--first .cover {
-	opacity: 0.4;
 	width: 120%;
 	max-width: none;
 	max-height: none;
@@ -19,8 +21,11 @@
 
 .slide__author{
 	font-size: 36px;
+	color: #fff;
 	line-height: 1.5;
 	text-align: right;
+	font-weight: 700;
+	margin-bottom: 5px !important;
 }
 
 h3 {
@@ -117,4 +122,8 @@ h3 {
 .slide .langs-list.langs-list li::before {
 	content: none;
 	padding: 0px;
+}
+
+.decor-list li::before {
+	opacity: 1;
 }
