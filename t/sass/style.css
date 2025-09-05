@@ -14,7 +14,8 @@ mark {
 }
 
 .slide--first {
-	padding-top: 40px;
+	padding-top: 30px;
+	padding-bottom: 40px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -36,7 +37,7 @@ mark {
 	line-height: 1.5;
 	text-align: right;
 	color: #fff;
-	margin: 0px !important;
+	margin: 0 0 5px !important;
 }
 
 h3 {

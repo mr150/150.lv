@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<title>Зачем нужны CSS-препроцессоры в 2024?</title>
+		<title>Зачем нужны CSS-препроцессоры в 2025?</title>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,25 +11,18 @@
 	<body class="shower list">
 
 		<header class="caption">
-			<h1>Зачем нужны CSS-препроцессоры в 2024?</h1>
+			<h1>Зачем нужны CSS-препроцессоры в 2025?</h1>
 			<p>
 				Валентин Ульянов
-				<time datetime="2024-09-27">09.2024</time>
+				<time datetime="2025-09-06">09.2025</time>
 			</p>
 		</header>
 
 		<section style="color:white;font-weight:bold" class="slide slide--first slide--no-number">
-			<h2 style="text-align:center">Зачем нужны <br>CSS-препроцессоры в 2024?</h2>
-			<div style="padding-bottom:40px" class="D-f Ai-fe Jc-sb">
-				<div>
-					<img class="Va" src="pictures/stachka-logo.svg" width="300" alt="Логотип Стачки">
-					<div>27-28 сентября | Санкт-Петербург</div>
-					<div style="gap:1rem" class="D-f Ai-c">
-						<img src="pictures/stachka-section-logo.png" width="70" alt="Логотип секции">
-						<span>Разработка | FrontEnd</span>
-					</div>
-				</div>
+			<h2 style="text-align:center">Зачем нужны <br>CSS-препроцессоры в 2025?</h2>
+			<div style="text-align:right">
 				<p class="slide__author">Валентин Ульянов</p>
+				<img style="vertical-align:top" width="120" src="../shared/pictures/r7.svg" alt="Р7">
 			</div>
 			<img class="cover" src="pictures/cover-final.jpg" alt="Обложка">
 		</section>
@@ -37,12 +30,56 @@
 		<section class="slide">
 			<h2>Обо мне</h2>
 			<div style="gap:4rem" class="D-f Ai-fs">
-				<img alt="Фото Валентина Ульянова" src="pictures/me.jpg" width="261"/>
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
 				<ul>
-					<li>В IT больше 8 лет</li>
-					<li>Делаю бэкенд на Node.js и тулинг</li>
+					<li>В IT около 10 лет</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты, редактор схем и диаграмм, типа draw.io</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../shared/pictures/r7-grafika.png" alt="Р7-Графика">
+				<figcaption class="copyright">
+					<a href="https://r7-office.ru/grafika" target="blank">
+						r7-office.ru/grafika
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты, редактор схем и диаграмм, типа draw.io</li>
 					<li>Разрабатываю open source проект</li>
-					<li>Выступаю на конференциях и веду <br>IT-сообщество в Питере на 500+ человек</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты, редактор схем и диаграмм, типа draw.io</li>
+					<li>Разрабатываю open source проект</li>
+					<li>Выступаю на конференциях и веду <br>IT-сообщество в Питере на 800+ человек</li>
 				</ul>
 			</div>
 		</section>
@@ -512,7 +549,7 @@ $base-color: #c6538c;
 				</tr>
 				<tr>
 					<td>Новые цветовые пространства</td>
-					<td>❌</td>
+					<td>✅</td>
 					<td>✅</td>
 				</tr>
 				<tr>
@@ -572,7 +609,7 @@ $base-color: #c6538c;
 				<tr>
 					<td>Случайное число: <code>random()</code></td>
 					<td>✅</td>
-					<td>❌</td>
+					<td>🟡</td>
 				</tr>
 			</table>
 		</section>
@@ -672,25 +709,44 @@ $base-color: #c6538c;
 		<section class="slide">
 			<h2>Менее популярные возможности</h2>
 			<ul class="decor-list">
-				<li value="❌">Миксины</li>
+				<li value="❌">Flow control правила: <code>@if</code>, <code>@each</code>, etc</li>
 			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/css-if.jpg" alt="if в CSS">
 		</section>
 
 		<section class="slide">
 			<h2>Менее популярные возможности</h2>
 			<ul class="decor-list">
+				<li value="❌">Flow control правила: <code>@if</code>, <code>@each</code>, etc</li>
 				<li value="❌">Миксины</li>
-				<li value="❌">Flow control правила и функции: <code>@if</code>, <code>if()</code>, <code>@each</code>, etc</li>
 			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img style="max-width:90%" class="cover" src="pictures/mixin-spec.jpg" alt="Спецификация миксинов в CSS">
+				<figcaption class="copyright">
+					<a href="https://www.w3.org/TR/css-mixins-1/" target="blank">
+						w3.org/TR/css-mixins-1
+					</a>
+				</figcaption>
+			</figure>
 		</section>
 
 		<section class="slide">
 			<h2>Менее популярные возможности</h2>
 			<ul class="decor-list">
+				<li value="❌">Flow control правила: <code>@if</code>, <code>@each</code>, etc</li>
 				<li value="❌">Миксины</li>
-				<li value="❌">Flow control правила и функции: <code>@if</code>, <code>if()</code>, <code>@each</code>, etc</li>
-				<li value="❌">Свои функции</li>
+				<li value="🟡">Свои функции</li>
 			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="pictures/css-fn.jpg" alt="Функции в CSS">
 		</section>
 
 		<section class="slide slide--no-number">
@@ -887,8 +943,8 @@ export function Button() {
 			<figure>
 				<img class="cover" src="pictures/sass-playground.webp" alt="Sass playground">
 				<figcaption class="copyright">
-					<a href="https://www.oddbird.net/work/sass-site/" target="blank">
-						oddbird.net/work/sass-site/
+					<a href="https://sass-lang.com/playground/" target="blank">
+						sass-lang.com/playground
 					</a>
 				</figcaption>
 			</figure>
@@ -1034,6 +1090,14 @@ export function Button() {
 		<section class="slide" style="padding-top:30px">
 			<h2>First-class миксины</h2>
 			<img width="600" alt="First-class миксин" src="pictures/first-class-mixin-code.jpg">
+		</section>
+
+		<section class="slide">
+			<h2>@at-root</h2>
+			<p>Выносит правило</p>
+			<ul>
+				<li>Из одного селектора в другой, либо в корень</li>
+			</ul>
 		</section>
 
 		<section class="slide">
@@ -1434,6 +1498,10 @@ $at-rules-db: (
 		</section>
 
 		<section class="slide">
+			<p style="font-size:42px" class="shout">Викторина</p>
+		</section>
+
+		<section class="slide">
 			<img class="cover" src="pictures/pure-css-art4.jpg" alt="Картина на CSS">
 		</section>
 
@@ -1582,9 +1650,9 @@ $at-rules-db: (
 					</span>
 				</div>
 				<div>
-					<div>Оцените доклад:</div>
-					<a style="background: none" href="https://forms.yandex.ru/cloud/6603ab52c417f359491580eb/?st12=5987" target="blank">
-						<img width="275" src="pictures/qr-feedback.png" alt="qr-код на обратную связь">
+					<div style="margin-bottom: 16px">Телеграм-канал:</div>
+					<a style="background: none" href="https://t.me/+GCmbEsAjfF8wODAy" target="blank">
+						<img width="250" src="../shared/pictures/qr-channel.png" alt="qr-код на телеграм канал">
 					</a>
 				</div>
 			</div>
