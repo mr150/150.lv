@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>mlut — make CSS exciting again!</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<link rel="stylesheet" href="../shared/shower/themes/ribbon/styles/styles.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="shower list">
+
+		<header class="caption">
+			<h1>mlut — make CSS exciting again!</h1>
+			<p>
+				Валентин Ульянов
+				<time datetime="2025-11-07">07.2025</time>
+			</p>
+		</header>
+
+		<section style="" id="cover" class="slide slide--no-number">
+			<div>
+				<h2 style="margin-bottom:auto"><span style="color: #f0438c">mlut </span>— make CSS<br> exciting again!</h2>
+				<p>Валентин Ульянов</p>
+				<img style="" width="120" src="../shared/pictures/r7.svg" alt="Р7">
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты и редакторы документов типа Word и Excel</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" style="opacity:92%" src="../shared/pictures/r7-table.jpg" alt="Редактор таблиц Р7">
+				<figcaption class="copyright">
+					<a href="https://r7-office.ru/ofis-dlya-doma-ucheby" target="blank">
+						r7-office.ru/ofis-dlya-doma-ucheby
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты и редакторы документов типа Word и Excel</li>
+					<li>Разрабатываю open source проект</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты и редакторы документов типа Word и Excel</li>
+					<li>Разрабатываю open source проект</li>
+					<li>Выступаю на конференциях и веду <br>IT-сообщество в Питере на 900+ человек</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../shared/pictures/spb-it-club.svg" alt="SPb IT Club">
+				<figcaption class="copyright">
+					<a href="https://t.me/+Uncah2SiM19hODdi" target="blank">
+						t.me/+Uncah2SiM19hODdi
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Обо мне</h2>
+			<div style="gap:4rem" class="D-f Ai-fs">
+				<img alt="Фото Валентина Ульянова" src="../shared/pictures/me.jpg" width="261"/>
+				<ul>
+					<li>В IT около 10 лет</li>
+					<li>Делаю инструменты и редакторы документов типа Word и Excel</li>
+					<li>Разрабатываю open source проект</li>
+					<li>Выступаю на конференциях и веду <br>IT-сообщество в Питере на 900+ человек</li>
+				</ul>
+			</div>
+		</section>
+
+		<section style="" class="slide">
+			<h2>Содержание</h2>
+			<ul>
+				<li>Проблемы верстки</li>
+				<li>Atomic CSS как решение</li>
+				<li>Основные преимущества mlut</li>
+				<li>Зачем это все</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Проблемы верстки</h2>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../acss/pictures/bem2018.jpg" alt="Скриншот сайта БЭМ в 2018">
+				<figcaption class="copyright">
+					<a href="https://ru.bem.info/" target="blank">
+						bem.info
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Стандартные вопросы БЭМ</h2>
+			<ul>
+				<li>Блок это или элемент?</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Стандартные вопросы БЭМ</h2>
+			<ul>
+				<li>Блок это или элемент?</li>
+				<li>Делать микс или модификатор?</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Стандартные вопросы БЭМ</h2>
+			<ul>
+				<li>Блок это или элемент?</li>
+				<li>Делать микс или модификатор?</li>
+				<li>Структура каталогов?</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Продвинутые вопросы БЭМ</h2>
+			<ul>
+				<li>Уровни переопределения</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Продвинутые вопросы БЭМ</h2>
+			<ul>
+				<li>Уровни переопределения</li>
+				<li>Собирать много блоков без коллизий</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Продвинутые вопросы БЭМ</h2>
+			<ul>
+				<li>Уровни переопределения</li>
+				<li>Собирать много блоков без коллизий</li>
+				<li>Автоматизация создания сущностей</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../acss/pictures/bem-tools.jpg" alt="Скриншот с bem-tools">
+				<figcaption class="copyright">
+					<a href="https://ru.bem.info/tutorials/classic/quick-start-static/" target="blank">
+						ru.bem.info/tutorials/classic/quick-start-static
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="../acss/pictures/css-in-js.jpg" alt="Код CSS-in-JS">
+		</section>
+
+		<section class="slide">
+			<h2>Современные подходы к CSS</h2>
+			<ul>
+				<li>Scoped-решения</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Современные подходы к CSS</h2>
+			<ul>
+				<li>Scoped-решения</li>
+				<li>CSS-in-JS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Современные подходы к CSS</h2>
+			<ul>
+				<li>Scoped-решения</li>
+				<li>CSS-in-JS</li>
+				<li>Shadow DOM</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Scoped-решения</h2>
+			<ul class="images-list">
+				<li>
+					<img alt="CSS modules logo" width="200" src="../acss/pictures/css-modules-invert.png"/>
+				</li>
+				<li>
+					<img alt="Vue JS logo" width="200" src="../acss/pictures/vue.png"/>
+				</li>
+				<li>
+					<img alt="Svelte logo" width="200" src="../acss/pictures/svelte.png"/>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Scoped-решения</h2>
+			<ul>
+				<li>Пишем CSS как обычно</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Scoped-решения</h2>
+			<ul>
+				<li>Пишем CSS как обычно</li>
+				<li>Переключение контекста</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Scoped-решения</h2>
+			<ul>
+				<li>Пишем CSS как обычно</li>
+				<li>Переключение контекста</li>
+				<li>Не для каждого стека</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Scoped-решения</h2>
+			<ul>
+				<li>Пишем CSS как обычно</li>
+				<li>Переключение контекста</li>
+				<li>Не для каждого стека</li>
+				<li>Большой бандл CSS*</li>
+			</ul>
+			<small>*Иногда можно сделать аглификацию, но это не точно</small>
+		</section>
+
+		<section class="slide">
+			<h2>CSS-in-JS</h2>
+			<ul class="images-list">
+				<li>
+					<img alt="StyleX logo" width="250" src="../acss/pictures/stylex-invert.png"/>
+				</li>
+				<li>
+					<img alt="Styled components logo" width="250" src="../acss/pictures/styled-components-invert-final.png"/>
+				</li>
+				<li>
+					<img alt="Emotion logo" width="200" src="../acss/pictures/emotion.png"/>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>CSS-in-JS</h2>
+			<ul>
+				<li>Пишем CSS не как обычно</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>CSS-in-JS</h2>
+			<ul>
+				<li>Пишем CSS не как обычно</li>
+				<li>Ограничения инструмента, баги, etc.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>CSS-in-JS</h2>
+			<ul>
+				<li>Пишем CSS не как обычно</li>
+				<li>Ограничения инструмента, баги, etc.</li>
+				<li>Не для каждого стека</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>CSS-in-JS</h2>
+			<ul>
+				<li>Пишем CSS не как обычно</li>
+				<li>Ограничения инструмента, баги, etc.</li>
+				<li>Не для каждого стека</li>
+				<li>Растет размер бандла*</li>
+			</ul>
+			<small>*При рантайм-решениях</small>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="../acss/pictures/my-path-mem.jpg" alt="Мой путь от БЭМ к Atomic CSS">
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout"><span style="display:block">Atomic CSS</span> как решение</h2>
+		</section>
+
+		<section class="slide slide--no-number">
+			<img class="cover" src="../acss/pictures/wtf-acss.jpg" alt="Пример кода с Atomic CSS">
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<div class="whether-layout">
+				<img width="350" src="../acss/pictures/forecast-briefly__day-link.jpg" alt="Блок с сайта погоды">
+			</div>
+		</section>
+
+		<section class="slide">
+			<div class="whether-layout">
+				<img width="350" src="../acss/pictures/forecast-briefly__day-link.jpg" alt="Блок с сайта погоды">
+				<div>
+					<img width="320" src="../acss/pictures/fact__hour.jpg" alt="Блок с сайта погоды">
+				</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<div class="whether-layout">
+				<img width="350" src="../acss/pictures/forecast-briefly__day-link.jpg" alt="Блок с сайта погоды">
+				<div>
+					<img width="320" src="../acss/pictures/fact__hour.jpg" alt="Блок с сайта погоды">
+					<img width="320" src="../acss/pictures/last-bem-weather.jpg" alt="Блок с сайта погоды">
+				</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+				<li><b>Меньше CSS на клиенте</b>: стили перестают добавляться</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<figure>
+				<img width="800" src="../acss/pictures/acss-reduce-css0.png" alt="График уменьшения размера CSS при переходе на Atomic">
+				<figcaption class="copyright">
+					<a href="https://johnpolacek.github.io/rethinking-css/" target="blank">
+						johnpolacek.github.io/rethinking-css
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../acss/pictures/acss-reduce-css1.jpg" alt="Пример уменьшения размера CSS при переходе на Atomic">
+				<figcaption class="copyright">
+					<a href="https://youtu.be/2-q4asoHUqU?si=QSlO9xGvF-bQuKDW&t=2241" target="blank">
+						youtu.be/2-q4asoHUqU?si=QSlO9xGvF-bQuKDW&amp;t=2241
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../acss/pictures/acss-reduce-css2.jpg" alt="Сравнения размера CSS популярных сайтов от Yahoo">
+				<figcaption class="copyright">
+					<a href="https://www.haikudeck.com/atomic-css-science-and-technology-presentation-dJ0xlFjhBQ" target="blank">
+						haikudeck.com/atomic-css-science-and-technology-presentation-dJ0xlFjhBQ
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+				<li><b>Меньше CSS на клиенте</b>: стили перестают добавляться</li>
+				<li><b>Быстрее пишем стили</b>: короткие классы, переключение файлов</li>
+			</ul>
+		</section>
+
+		<section class="slide" style="padding-top:165px">
+			<figure style="padding-left:65px">
+				<blockquote>
+					<p>
+						Your productivity is <b>incredibly high</b> because your brain doesn’t need to context switch between markup and stylesheet.
+					</p>
+				</blockquote>
+				<figcaption>Simon Vrachliotis</figcaption>
+			</figure>
+			<a href="https://medium.com/@simonswiss/full-re-write-in-10-days-with-tachyons-and-functional-css-a-case-study-part-4-b565745ca1e5" target="blank"><small>Full re-write in 10 days with tachyons and functional CSS: A case study</small></a>
+		</section>
+
+		<section class="slide" style="padding-top:165px">
+			<figure style="padding-left:65px">
+				<blockquote>
+					<p>
+						...we have seen a significant improvement in our development speed and the feedback has generally been positive.
+					</p>
+				</blockquote>
+				<figcaption>Nikola Novak</figcaption>
+			</figure>
+			<a href="https://seekandhit.com/engineering/optimising-style-for-speed-our-journey-from-styled-components-to-tailwind-css/" target="blank"><small>Optimising Style for Speed: Our Journey from styled-components to Tailwind CSS</small></a>
+		</section>
+
+		<section class="slide">
+			<h2>Почему Atomic CSS</h2>
+			<ul>
+				<li><b>Тратим меньше мыслетоплива</b>: названия сущностей, структура каталогов</li>
+				<li><b>Меньше CSS на клиенте</b>: стили перестают добавляться</li>
+				<li><b>Быстрее пишем стили</b>: короткие классы, переключение файлов</li>
+				<li><b>Stack agnostic</b>: можно применять на любом стеке</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../acss/pictures/tw-state-of-css.jpg" alt="% использования Tailwind за последине годы в State Of CSS">
+				<figcaption class="copyright">
+					<a href="https://2025.stateofcss.com/en-US/other-tools/#css_frameworks" target="blank">
+						2025.stateofcss.com/en-US/other-tools/#css_frameworks
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../acss/pictures/lemon-squeezy-screen.webp" alt="Сайт Lemon Squeezy">
+				<figcaption class="copyright">
+					<a href="https://tailwindcss.com/showcase/lemon-squeezy" style="color:black" target="blank">
+						tailwindcss.com/showcase/lemon-squeezy
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" src="../acss/pictures/the-verge-screen.webp" alt="Сайт The Verge">
+				<figcaption class="copyright">
+					<a href="https://tailwindcss.com/showcase/the-verge" target="blank">
+						tailwindcss.com/showcase/the-verge
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="../mlut/pictures/myths.jpg" alt="Основные мифы об Atomic CSS">
+		</section>
+
+		<section class="slide" style="padding-top: 150px;">
+			<div style="text-align:center; margin-bottom:10px">
+				<img width="500" src="../acss/pictures/mlut-logo.png" alt="mlut">
+			</div>
+			<blockquote style="max-width: 635px; padding-left: 295px;">
+				<p>
+					Make CSS exciting again!
+				</p>
+			</blockquote>
+		</section>
+
+		<section class="slide">
+			<h2>Ключевые преимущества</h2>
+			<ol>
+				<li><b>Краткий и строгий нейминг</b>. Если вы знаете CSS, то вы почти знаете mlut</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Сокращения</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<ul class="pros-cons-list">
+					<li value="+">Лаконичный код</li>
+					<li value="+">Удобнее писать</li>
+					<li value="+">Чуть меньше вес кода</li>
+				</ul>
+				<div></div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="../acss/pictures/abbr-mem.jpeg" alt="Мем с Гарольдом: лаконичный код, удобнее писать">
+		</section>
+
+		<section class="slide">
+			<h2>Сокращения</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<ul class="pros-cons-list">
+					<li value="+">Лаконичный код</li>
+					<li value="+">Удобнее писать</li>
+					<li value="+">Чуть меньше вес кода</li>
+				</ul>
+				<ul class="pros-cons-list">
+					<li>Есть порог входа</li>
+					<li>Подойдут не всем</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Алгоритм сокращений</h2>
+			<ul>
+				<li>Позволяет избежать коллизий с новыми свойствами/значениями в CSS</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Алгоритм сокращений</h2>
+			<ul>
+				<li>Позволяет избежать коллизий с новыми свойствами/значениями в CSS</li>
+				<li>Возможность выводить свойства "в голове", а не зазубривать их</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Неконсистентный нейминг</h2>
+			<ul class="decor-list">
+				<li value="❌">
+					<code>flex</code> => <code>display: flex</code>, но <code>flex-auto</code> => <code>flex: 1 1 auto</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Неконсистентный нейминг</h2>
+			<ul class="decor-list">
+				<li value="❌">
+					<code>flex</code> => <code>display: flex</code>, но <code>flex-auto</code> => <code>flex: 1 1 auto</code>
+				</li>
+				<li value="❌">
+					<code>tracking-wide</code> => <code>letter-spacing: 0.025em;</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Неконсистентный нейминг</h2>
+			<ul class="decor-list">
+				<li value="❌">
+					<code>flex</code> => <code>display: flex</code>, но <code>flex-auto</code> => <code>flex: 1 1 auto</code>
+				</li>
+				<li value="❌">
+					<code>tracking-wide</code> => <code>letter-spacing: 0.025em;</code>
+				</li>
+				<li value="❌"><code>normal</code>: line-height, font-weight, letter-spacing?</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>mlut</h2>
+			<ul class="decor-list">
+				<li value="✅">
+					<code>Js-c</code> => <code>justify-self: center</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>mlut</h2>
+			<ul class="decor-list">
+				<li value="✅">
+					<code>Js-c</code> => <code>justify-self: center</code>
+				</li>
+				<li value="✅">
+					<code>Bdr</code> => <code>border-right: 1px solid</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>mlut</h2>
+			<ul class="decor-list">
+				<li value="✅">
+					<code>Js-c</code> => <code>justify-self: center</code>
+				</li>
+				<li value="✅">
+					<code>Bdr</code> => <code>border-right: 1px solid</code>
+				</li>
+				<li value="✅">
+					<code>Bdrd1</code> => <code>border-radius: 1px</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Ключевые преимущества</h2>
+			<ol>
+				<li><b>Краткий и строгий нейминг</b>. Если вы знаете CSS, то вы почти знаете mlut</li>
+				<li><b>Богатый и нативный синтаксис</b>. Это как Vim для CSS</li>
+			</ol>
+		</section>
+
+		<section class="slide">
+			<h2>Богатый и нативный синтаксис</h2>
+			<p>
+				Удобно создавать сложные стили с помощью мощного синтаксиса, концептуально близкого к CSS
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Tailwind</h2>
+			<ul class="decor-list">
+				<li value="❌">
+					<code>[@media(any-hover:hover){&:hover}]:opacity-100</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Tailwind</h2>
+			<ul class="decor-list">
+				<li value="❌">
+					<code>[@media(any-hover:hover){&:hover}]:opacity-100</code>
+				</li>
+				<li value="❌">
+					<code>text-[length:var(--myVar,1.3rem)]</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Tailwind</h2>
+			<ul class="decor-list">
+				<li value="❌">
+					<code>[@media(any-hover:hover){&:hover}]:opacity-100</code>
+				</li>
+				<li value="❌">
+					<code>text-[length:var(--myVar,1.3rem)]</code>
+				</li>
+				<li value="❌">
+					<code>supports-[margin:1svw]:ml-[1svw]</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>mlut</h2>
+			<ul class="decor-list">
+				<li value="✅">
+					<code>@:ah_O1_h</code>
+				</li>
+				<li value="✅">
+					<code>Fns-$myVar?1.3</code>
+				</li>
+				<li value="✅">
+					<code>@s_Ml1svw</code>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Ключевые преимущества</h2>
+			<ol>
+				<li><b>Краткий и строгий нейминг</b>. Если вы знаете CSS, то вы почти знаете mlut</li>
+				<li><b>Богатый и нативный синтаксис</b>. Это как Vim для CSS</li>
+				<li><b>Написан на Sass</b>. Мощь препроцессора из коробки для рукописного CSS</li>
+			</ol>
+		</section>
+
+		<section style="padding-top:110px" class="slide">
+			<h2 style="font-size:72px">Страшная тайна Atomic CSS 😱</h2>
+			<blockquote style="max-width: 635px; padding-left: 65px;">
+				<p>
+					В большинстве проектов небольшую часть CSS вам придется написать руками!
+				</p>
+			</blockquote>
+		</section>
+
+		<section class="slide">
+			<h2>Что уже есть?</h2>
+			<ul>
+				<li>Генератор утилит почти любой сложности</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code>@:ah_O1_h</code>
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span><span style="color:var(--token-sass-comment)">_O1_h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code> </code>
+				<code> </code>
+				<code> </code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span><span style="color:var(--token-sass-comment)">_O1_h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h { </code>
+				<code> </code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span>_<mark><span style="color:var(--token-property)">O</span>1</mark>_<span style="color:var(--token-sass-comment)">h</span></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h { </code>
+				<code>    <mark><span  style="color:var(--token-property)">opacity</span>: 1</mark></code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<p>
+				<code><span style="color:var(--token-at-rule)">@:ah</span>_<span style="color:var(--token-property)">O</span>1_<mark><span  style="color:var(--token-selector)">h</span></mark></code> =>
+			</p>
+			<pre>
+				<code><span style="color:var(--token-at-rule)">@media (any-hover)</span> {</code>
+				<code>  .\@\:ah_O1_h<mark><span style="color:var(--token-selector)">:hover</span></mark> {</code>
+				<code>    <span  style="color:var(--token-property)">opacity</span>: 1</code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<h2>Что уже есть?</h2>
+			<ul>
+				<li>Генератор утилит почти любой сложности</li>
+				<li>JIT-движок, который умеет генерировать утилиты из HTML/JSX/etc</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Что уже есть?</h2>
+			<ul>
+				<li>Генератор утилит почти любой сложности</li>
+				<li>JIT-движок, который умеет генерировать утилиты из HTML/JSX/etc</li>
+				<li>CLI с минификацией и автопрефиксером</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Что уже есть?</h2>
+			<ul>
+				<li>Генератор утилит почти любой сложности</li>
+				<li>JIT-движок, который умеет генерировать утилиты из HTML/JSX/etc</li>
+				<li>CLI с минификацией и автопрефиксером</li>
+				<li>Плагины для сборщиков фронтенда: Webpack, Vite и Rollup</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<figure>
+				<img class="cover" style="opacity:92%" src="pictures/html-academy.jpg" alt="Обложка курса HTML Academy">
+				<figcaption class="copyright">
+					<a href="https://htmlacademy.ru/demos/183/step/17" target="blank">
+						htmlacademy.ru/demos/183/step/17
+					</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Планы по развитию</h2>
+			<ul>
+				<li>Запуск инструмента прямо в браузере</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Планы по развитию</h2>
+			<ul>
+				<li>Запуск инструмента прямо в браузере</li>
+				<li><code>:has()</code> и подобные псевдоселекторы в утилитах</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Планы по развитию</h2>
+			<ul>
+				<li>Запуск инструмента прямо в браузере</li>
+				<li><code>:has()</code> и подобные псевдоселекторы в утилитах</li>
+				<li>Плагины к IDE для автокомплита и подсказок</li>
+			</ul>
+		</section>
+
+		<section class="slide slide--no-number">
+			<h2 class="shout">Заключение</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Зачем?</h2>
+			<ul>
+				<li>Решение проблем</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Зачем?</h2>
+			<ul>
+				<li>Решение проблем</li>
+				<li>Показать сообществу новые идеи</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Зачем?</h2>
+			<ul>
+				<li>Решение проблем</li>
+				<li>Показать сообществу новые идеи</li>
+				<li>Мечта — full time open source</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Дополнительные материалы</h2>
+			<ul>
+				<li><a href="https://habr.com/ru/articles/833712/" target="blank">Atomic CSS Deep Dive</a></li>
+				<li><a href="https://www.youtube.com/watch?v=W2liFE4yj-s" target="blank">Atomic CSS: верстка и легкость бытия</a></li>
+			</ul>
+		</section>
+
+		<section class="slide" style="background-image: url('pictures/cover-new-bg.png'); background-size: contain">
+			<h2>Вопросы?</h2>
+			<div class="D-g Gap2r Gtc-t2">
+				<div>
+					<em>Валентин Ульянов</em>
+					<ul class="decor-list">
+						<li value="👋"><a href="https://150.lv" target="blank">150.lv</a></li>
+						<li value="📢"><a href="https://t.me/+GCmbEsAjfF8wODAy" target="blank">t.me/blog150</a></li>
+						<li value="⭐"><a href="https://github.com/mlutcss/mlut" target="blank">github.com/mlutcss/mlut</a></li>
+					</ul>
+					<span>
+						Презентация: <a href="https://150.lv/t/os-mlut" target="blank">150.lv/t/os-mlut</a>
+					</span>
+				</div>
+				<div>
+					<div style="margin-bottom: 16px">Телеграм-канал:</div>
+					<a style="background: white; display:table; padding:16px;" href="https://t.me/+GCmbEsAjfF8wODAy" target="blank">
+						<img style="display:block" width="225" src="../acss/pictures/qr-channel.png" alt="qr-код на телеграм канал">
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<footer class="badge">
+			<a href="https://github.com/shower/shower">Powered by Shower</a>
+		</footer>
+
+		<div class="progress"></div>
+
+		<script src="../shared/shower/shower.js"></script>
+	</body>
+</html>
